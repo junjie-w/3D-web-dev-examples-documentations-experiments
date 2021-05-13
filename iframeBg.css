@@ -1,0 +1,15 @@
+.iframeBg {
+    width: 100%;
+    background-color: lightslategray;
+    display: grid;
+}
+
+svg {}
+
+.bg-click-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: linen;
+}

@@ -10,12 +10,51 @@
 </head>
 
 <body>
-    <section>
-        <div class="nav"></div>
-    </section>
+    <!-- <section class="navContainer"> -->
+    <div class="nav">
+        <ul class="nav__ul">
+            <li class="demo">
+                <a href="#readme">
+                    <span class="demoLink">read me</span>
+                </a>
+            </li>
+            <li class="demo">
+                <a href="shadow.html">
+                    <span class="demoLink">Light & shadow</span>
+                </a>
+            </li>
+            <li class="demo">
+                <a href="island.html">
+                    <span class="demoLink">Sea & island</span>
+                </a>
+            </li>
+            <li class="demo">
+                <a href="particles.html">
+                    <span class="demoLink">Particles</span>
+                </a>
+            </li>
+            <li class="demo">
+                <a href="storm.html">
+                    <span class="demoLink">Storm</span>
+                </a>
+            </li>
+            <li class="demo">
+                <a href="planet.html">
+                    <span class="demoLink">Planet</span>
+                </a>
+            </li>
+            <li class="demo">
+                <a href="bee.html">
+                    <span class="demoLink">Flying bee</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- </section> -->
 
+    <!-- <section class="content"> -->
     <section>
-        <h1 class="title">3D web development: some examples, methods, and experiments</h1>
+        <h1 class="title" id="readme">3D web development: some examples, methods, and experiments</h1>
 
         <p>This is a simple collection of 3D web development techniques, and it's only based on my own person
             experience.<br />
@@ -25,22 +64,26 @@
             I listed some simple websites tried by myself here – they are just for experimenting with different
             techniques
             and still need to be improved a lot. </br>
-            Practicing with these techniques is a long-term, on-going process. I will try to update them whenever I can.
+            Practicing with these techniques is a long-term, on-going process. I will try to update them whenever I
+            can.
             </br>
             3D web development is difficult, but there’re some parts that are relatively easier to do. I only tried
             these
             easy ones :D Hopefully those difficult parts become easier in the future!</p>
 
         <h2>What is WebGL?</h2>
-        <p>WebGL, short for Web Graphics Library,is a JavaScript API for rendering interactive 2D and 3D graphics within
+        <p>WebGL, short for Web Graphics Library,is a JavaScript API for rendering interactive 2D and 3D graphics
+            within
             any
-            compatible web browser. WebGL elements can be mixed with other HTML elements and composited with other parts
+            compatible web browser. WebGL elements can be mixed with other HTML elements and composited with other
+            parts
             of
             the page or page background.</p>
         <p class="source"><i>Source: <a href="https://en.wikipedia.org/wiki/WebGL"> Wikipedia: WebGL</a></i></p>
 
         <h2>What are WebGL frameworks?</h2>
-        <p>Frameworks are available to create WebGL content quickly and easily without building from the ground up.</p>
+        <p>Frameworks are available to create WebGL content quickly and easily without building from the ground up.
+        </p>
         <p class="source"><i>Source: <a
                     href="https://en.wikipedia.org/wiki/List_of_WebGL_frameworks#:~:text=Frameworks%20are%20available%20to%20create,building%20from%20the%20ground%20up.&text=An%20open%20source%20JavaScript%20library,using%20WebGL%2C%20developed%20by%20Ambiera.">
                     Wikipedia: List of WebGL frameworks</a></i></p>
@@ -52,13 +95,15 @@
     <section>
         <h2>Three.js, A-frame and Babylon.js</h2>
         <h3>What is Three.js?</h3>
-        <p>Three.js is a cross-browser JavaScript library used to create and display animated 3D computer graphics in a
+        <p>Three.js is a cross-browser JavaScript library used to create and display animated 3D computer graphics
+            in a
             web
             browser using WebGL. <br />It was first released by <a href="https://ricardocabello.com/">Ricardo
                 Cabello</a>,
             aka <a href="https://mrdoob.com/">Mr.doob</a> to <a href="https://github.com/mrdoob/three.js/">Github</a> in
             2010.</p>
-        <p class="source"><i>Source: <a href="https://en.wikipedia.org/wiki/Three.js"> Wikipedia: Three.js</a></i></p>
+        <p class="source"><i>Source: <a href="https://en.wikipedia.org/wiki/Three.js"> Wikipedia: Three.js</a></i>
+        </p>
 
         <h3>What is A-frame?</h3>
         <p>A-Frame is a web framework for building virtual reality experiences. It is based on top of HTML, making
@@ -68,10 +113,12 @@
                     What is A-Frame?</a></i></p>
 
         <h3>What is Babylon.js?</h3>
-        <p>Babylon.js is a real time 3D engine using a JavaScript library for displaying 3D graphics in a web browser
+        <p>Babylon.js is a real time 3D engine using a JavaScript library for displaying 3D graphics in a web
+            browser
             via
             HTML5. The source code is available on GitHub and distributed under the Apache License 2.0.</p>
-        <p class="source"><i>Source: <a href="https://en.wikipedia.org/wiki/Babylon.js"> Wikipedia: Babylon.js</a></i>
+        <p class="source"><i>Source: <a href="https://en.wikipedia.org/wiki/Babylon.js"> Wikipedia:
+                    Babylon.js</a></i>
         </p>
     </section>
 
@@ -82,7 +129,8 @@
         </h3>
         <script async src="//jsfiddle.net/fxurzeb4/embed/js,html,css,result/dark/"></script>
 
-        <h3> <a href="https://aframe.io/docs/1.2.0/guides/building-a-basic-scene.html">Create a scene with A-frame</a>
+        <h3> <a href="https://aframe.io/docs/1.2.0/guides/building-a-basic-scene.html">Create a scene with
+                A-frame</a>
         </h3>
         <iframe src="https://glitch.com/edit/#!/aframe?path=index.html%3A1%3A0" loading="lazy"></iframe>
 
@@ -130,9 +178,10 @@
         <button id="island__load"><a href="https://junjie-w.github.io/experiments/island.html"
                 target="island__iframe">Load Content</a></button>
         <!-- <button id="island__clear"><a href="" target="island__iframe">Clear Content</a></button> -->
-        <button id="island__clear">Clear Content</button>
+        <button id="island__clear"><a href="iframeBg.html" target="island__iframe">Clear Content</a></button>
         <iframe id="island__iframe" name="island__iframe" loading="lazy"> </iframe>
-        <p>We can load models with pre-built animations, transform models, add audios, animations and event listeners to
+        <p>We can load models with pre-built animations, transform models, add audios, animations and event
+            listeners to
             them. </p>
         <h4>What I did here:</h4>
         <ol>
@@ -186,7 +235,8 @@
             <li>Added sounds with animations;</li>
             <li>Changed the color of one mesh of the island model;</li>
             <li>Added spheres, lights and shadows;</li>
-            <li>Added one <a href="https://threejs.org/docs/#api/en/geometries/CircleGeometry">CircleGeometry</a>, with
+            <li>Added one <a href="https://threejs.org/docs/#api/en/geometries/CircleGeometry">CircleGeometry</a>,
+                with
                 material as an image of a clock, using Three.js;</li>
             <div class="island__files">
                 <div class="gist-container">
@@ -203,7 +253,8 @@
         </ol>
         <h4>Side notes</h4>
         <p>Loading these models could be slow → probably need to design a loading screen
-            Audio will change volume when it’s getting closer/further to/from the user. This depends on which mesh/model
+            Audio will change volume when it’s getting closer/further to/from the user. This depends on which
+            mesh/model
             it is attached to, and what movements that mesh/model has.
             Volume control button gives users options to have sounds on or off.
             There are some common patterns we can see from example websites: subtle rotation, particles,
@@ -268,8 +319,8 @@
                         src="https://sketchfab.com/models/fdc8b5ba548243448f9b918ea7892786/embed"> </iframe>
                     <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
                             href="https://sketchfab.com/3d-models/suburban-street-lamp-fdc8b5ba548243448f9b918ea7892786?utm_medium=embed&utm_campaign=share-popup&utm_content=fdc8b5ba548243448f9b918ea7892786"
-                            target="_blank" style="font-weight: bold; color: #1CAAD9;"> Suburban Street Lamp </a> by <a
-                            href="https://sketchfab.com/gadsby?utm_medium=embed&utm_campaign=share-popup&utm_content=fdc8b5ba548243448f9b918ea7892786"
+                            target="_blank" style="font-weight: bold; color: #1CAAD9;"> Suburban Street Lamp </a> by
+                        <a href="https://sketchfab.com/gadsby?utm_medium=embed&utm_campaign=share-popup&utm_content=fdc8b5ba548243448f9b918ea7892786"
                             target="_blank" style="font-weight: bold; color: #1CAAD9;"> gadsby </a> on <a
                             href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=fdc8b5ba548243448f9b918ea7892786"
                             target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p>
@@ -290,7 +341,8 @@
             <li>Added particles to the scene using <a
                     href="https://www.npmjs.com/package/aframe-particle-system-component">aframe-particle-system-component;</a>
             </li>
-            <li>Added one pointLight and one spotLight for each light source of the street lamp and traffic lights;</li>
+            <li>Added one pointLight and one spotLight for each light source of the street lamp and traffic lights;
+            </li>
             <li>Added animation to the lights;</li>
             <li>Added animation to the snowman;</li>
             <li>Added a bit of physics effects using <a
@@ -317,7 +369,8 @@
         <h3>Examples</h3>
         <iframe src="https://pendereckisgarden.pl/en/the-maestros-manor" loading="lazy"></iframe>
         <h3>Online Tutorials and Documentations</h3>
-        <p> <a href="https://aerotwist.com/tutorials/creating-particles-with-three-js/">Creating particles with Three.js
+        <p> <a href="https://aerotwist.com/tutorials/creating-particles-with-three-js/">Creating particles with
+                Three.js
             </a></p>
         <iframe src="https://aerotwist.com/tutorials/creating-particles-with-three-js/" loading="lazy"></iframe>
 
@@ -354,7 +407,8 @@
                 Math.random();</li>
             <li>Created a simple cross svg in Figma and set it to the image of each particle;</li>
             <li>Add animations using requestAnimationFrame to the mesh and particles.</li>
-            <li>Get the x and y position of the mouse and add animation with mouse movements to the mesh and particles.
+            <li>Get the x and y position of the mouse and add animation with mouse movements to the mesh and
+                particles.
             </li>
 
             <div class="island__files">
@@ -380,7 +434,8 @@
         <iframe src="https://prior.co.jp/discover/en" loading="lazy"></iframe>
 
         <h3>Online Tutorials and Documentations</h3>
-        <p> <a href="https://aerotwist.com/tutorials/creating-particles-with-three-js/">Creating particles with Three.js
+        <p> <a href="https://aerotwist.com/tutorials/creating-particles-with-three-js/">Creating particles with
+                Three.js
             </a></p>
         <iframe src="https://aerotwist.com/tutorials/creating-particles-with-three-js/" loading="lazy"></iframe>
 
@@ -398,14 +453,16 @@
         <button id="particles__clear">Clear Content</button>
         <iframe id="particles__iframe" name="particles__iframe" loading="lazy"> </iframe>
         <p>I tried to use cloth simulation here. If you click on the lights and wait for a while, a soft clock will
-            appear like floating in the air. However, it’s far from what I expected. I am trying to make it a real-time
+            appear like floating in the air. However, it’s far from what I expected. I am trying to make it a
+            real-time
             clock tho... And trying to add more interactions.
         </p>
         <h4>What I did here:</h4>
         <ol>
             <li>Created a mesh with CircleGeometry and set its material as an image of a clock;</li>
             <li>When the clock doesn't hit position.y as 1, its position will keep going down;</li>
-            <li>Its vertices will change position x, y, and z like waves along with the time changing, this is achieved
+            <li>Its vertices will change position x, y, and z like waves along with the time changing, this is
+                achieved
                 by using Map function and Math.sin().</li>
 
             <div class="island__files">
@@ -432,7 +489,8 @@
         <iframe src="https://uxblon.de/index.html" loading="lazy"></iframe>
 
         <h3>Online Tutorial</h3>
-        <p> <a href="https://tympanus.net/codrops/2017/11/28/decorative-webgl-backgrounds/">Interactive 3D background
+        <p> <a href="https://tympanus.net/codrops/2017/11/28/decorative-webgl-backgrounds/">Interactive 3D
+                background
                 with Three.js </a></p>
         <iframe src="https://tympanus.net/codrops/2017/11/28/decorative-webgl-backgrounds/" loading="lazy"></iframe>
     </section>
@@ -443,7 +501,8 @@
         <p> <a href="https://aframe.io/examples/showcase/sky/"> 360° image with A-frame </a></p>
         <iframe src="https://aframe.io/examples/showcase/sky/" loading="lazy"></iframe>
 
-        <p> <a href="https://threejs.org/examples/webgl_postprocessing_crossfade.html"> Scenes transition with Three.js
+        <p> <a href="https://threejs.org/examples/webgl_postprocessing_crossfade.html"> Scenes transition with
+                Three.js
             </a></p>
         <iframe src="https://threejs.org/examples/webgl_postprocessing_crossfade.html" loading="lazy"></iframe>
 
@@ -458,6 +517,7 @@
         <a href="https://lo-th.github.io/Oimo.js/#basic">Oimo.js</a>
         <a href="https://schteppe.github.io/cannon.js/">Cannon.js</a>
     </section>
+    <!-- </section> -->
 
     <script src="app.js"></script>
 </body>

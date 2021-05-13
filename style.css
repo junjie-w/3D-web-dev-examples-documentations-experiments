@@ -1,5 +1,9 @@
+/* body {
+    padding-right: 10vw;
+} */
+
 body {
-    padding: 10vw;
+    padding: 8vw 10vw 10vw 15vw;
     display: flex;
     flex-direction: column;
 }
@@ -38,4 +42,50 @@ p {
 .island__files {
     display: flex;
     justify-content: space-between;
+}
+
+.iframe-small {
+    height: 5vw;
+}
+
+.nav {
+    position: fixed;
+    width: max(1vw, 2vh);
+    width: 10vw;
+    height: 100vh;
+    transition: 0.5s;
+    overflow: hidden;
+    border-right: 1px solid lightgrey;
+    height: 75vh;
+    align-self: center;
+    z-index: 3;
+    left: 1vw;
+}
+
+/* .nav:hover {
+    width: 11.43vw;
+} */
+
+.nav__ul {
+    width: 8vw;
+    margin: 0.5vw 0.5vw 0.5vw 0;
+    /* visibility: hidden; */
+}
+
+.nav ul li {
+    width: 100%;
+    list-style: none;
+    margin: 0.7vw 0.7vw 0.7vw 0;
+}
+
+.demo:hover {
+    font-weight: bold;
+}
+
+.demoLink {
+    color: #000;
+}
+
+.displayNav {
+    visibility: visible;
 }
