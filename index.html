@@ -349,17 +349,13 @@
             quidem excepturi labore?</p>
         <h4>What I did here:</h4>
         <ol>
-            <li>Loaded three models from Sketchfab;</li>
-
-            <li>Added particles to the scene using <a
-                    href="https://www.npmjs.com/package/aframe-particle-system-component">aframe-particle-system-component;</a>
+            <li>Created a mesh with TorusGeometry and set its material using PointMaterial;</li>
+            <li>For particles: created 5000 particles with random x, y, and z positions using float32array and
+                Math.random();</li>
+            <li>Created a simple cross svg in Figma and set it to the image of each particle;</li>
+            <li>Add animations using requestAnimationFrame to the mesh and particles.</li>
+            <li>Get the x and y position of the mouse and add animation with mouse movements to the mesh and particles.
             </li>
-            <li>Added one pointLight and one spotLight for each light source of the street lamp and traffic lights;</li>
-            <li>Added animation to the lights;</li>
-            <li>Added animation to the snowman;</li>
-            <li>Added a bit of physics effects using <a
-                    href="https://github.com/n5ro/aframe-physics-system">aframe-physics-system</a></li>
-            <li>Added spheres, lights and shadows;</li>
 
             <div class="island__files">
                 <div class="gist-container">
@@ -376,19 +372,92 @@
         </ol>
     </section>
 
-    <iframe src="https://threejs.org/examples/#webgl_animation_skinning_blending" title="importing models"></iframe>
-    <iframe src="https://junjie-w.github.io/experiments/shadow.html" title="importing models"></iframe>
-    <iframe src="https://pendereckisgarden.pl/en/the-maestros-manor" title="importing models"></iframe>
-    <iframe src="https://threejs.org/examples/#webgl_animation_cloth" title="importing models"></iframe>
-    <iframe src="https://lusion.co/" title="importing models"></iframe>
-    <iframe src="https://prior.co.jp/discover/en" title="importing models"></iframe>
-    <iframe src="https://go.pioneer.com/cornrevolution" title="importing models"></iframe>
-    <iframe src="https://richardmattka.com/" title="importing models"></iframe>
-    <iframe src="https://chartogne-taillet.com/en" title="importing models"></iframe>
-    <iframe src="https://uxblon.de/index.html" title="importing models"></iframe>
+    <section>
+        <h2>Cloth simulation</h2>
+        <h3>Examples</h3>
+        <iframe src="https://threejs.org/examples/#webgl_animation_cloth" loading="lazy"></iframe>
+        <iframe src="https://lusion.co/" loading="lazy"></iframe>
+        <iframe src="https://prior.co.jp/discover/en" loading="lazy"></iframe>
 
+        <h3>Online Tutorials and Documentations</h3>
+        <p> <a href="https://aerotwist.com/tutorials/creating-particles-with-three-js/">Creating particles with Three.js
+            </a></p>
+        <iframe src="https://aerotwist.com/tutorials/creating-particles-with-three-js/" loading="lazy"></iframe>
 
-    <h1></h1>
+        <p> <a href="https://blog.raananweber.com/2016/04/03/cloth-physics-simulation-for-babylon-js/">Particle
+                systems</a> in Babylon.js</p>
+        <iframe src="https://blog.raananweber.com/2016/04/03/cloth-physics-simulation-for-babylon-js/"
+            loading="lazy"></iframe>
+    </section>
+
+    <section>
+        <h3>Experiment: Cloth Simulation</h3>
+        <button id="particles__load"><a href="https://junjie-w.github.io/experiments/island.html"
+                target="particles__iframe">Load Content</a></button>
+        <!-- <button id="island__clear"><a href="" target="island__iframe">Clear Content</a></button> -->
+        <button id="particles__clear">Clear Content</button>
+        <iframe id="particles__iframe" name="particles__iframe" loading="lazy"> </iframe>
+        <p>I tried to use cloth simulation here. If you click on the lights and wait for a while, a soft clock will
+            appear like floating in the air. However, it’s far from what I expected. I am trying to make it a real-time
+            clock tho... And trying to add more interactions.
+        </p>
+        <h4>What I did here:</h4>
+        <ol>
+            <li>Created a mesh with CircleGeometry and set its material as an image of a clock;</li>
+            <li>When the clock doesn't hit position.y as 1, its position will keep going down;</li>
+            <li>Its vertices will change position x, y, and z like waves along with the time changing, this is achieved
+                by using Map function and Math.sin().</li>
+
+            <div class="island__files">
+                <div class="gist-container">
+                    <script
+                        src="https://gist-it.appspot.com/https://github.com/junjie-w/experiments/blob/main/island.html">
+                    </script>
+                </div>
+                <div class="gist-container">
+                    <script
+                        src="https://gist-it.appspot.com/https://github.com/junjie-w/experiments/blob/main/island/island.js">
+                    </script>
+                </div>
+            </div>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Other examples for interactive backgrounds and elements</h2>
+        <h3>Examples</h3>
+        <iframe src="https://go.pioneer.com/cornrevolution" loading="lazy"></iframe>
+        <iframe src="https://richardmattka.com/" loading="lazy"></iframe>
+        <iframe src="https://chartogne-taillet.com/en" loading="lazy"></iframe>
+        <iframe src="https://uxblon.de/index.html" loading="lazy"></iframe>
+
+        <h3>Online Tutorial</h3>
+        <p> <a href="https://tympanus.net/codrops/2017/11/28/decorative-webgl-backgrounds/">Interactive 3D background
+                with Three.js </a></p>
+        <iframe src="https://tympanus.net/codrops/2017/11/28/decorative-webgl-backgrounds/" loading="lazy"></iframe>
+    </section>
+
+    <section>
+        <h2>Some other effects that I haven't tried</h2>
+        <h3>Examples</h3>
+        <p> <a href="https://aframe.io/examples/showcase/sky/"> 360° image with A-frame </a></p>
+        <iframe src="https://aframe.io/examples/showcase/sky/" loading="lazy"></iframe>
+
+        <p> <a href="https://threejs.org/examples/webgl_postprocessing_crossfade.html"> Scenes transition with Three.js
+            </a></p>
+        <iframe src="https://threejs.org/examples/webgl_postprocessing_crossfade.html" loading="lazy"></iframe>
+
+        <p> <a href="https://www.midwam.com/en"> Shader - looks pretty difficult - Shaders are written in the C-like
+                language GLSL </a></p>
+        <iframe src="https://www.midwam.com/en" loading="lazy"></iframe>
+
+        <p> <a href="http://letsplay.ouigo.com/"> Physics (such as gravity and collisions)</a></p>
+        <iframe src="http://letsplay.ouigo.com/" loading="lazy"></iframe>
+        <p>Some of the 3D physics engines for Javascript: </p>
+        <a href="https://github.com/kripken/ammo.js/">Ammo.js</a>
+        <a href="https://lo-th.github.io/Oimo.js/#basic">Oimo.js</a>
+        <a href="https://schteppe.github.io/cannon.js/">Cannon.js</a>
+    </section>
 
     <script src="app.js"></script>
 </body>
