@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <div class="nav"></div>
+    </section>
+
+    <section>
+        <h1 class="title">3D web development: some examples, methods, and experiments</h1>
+
+        <p>This is a simple collection of 3D web development techniques, and it's only based on my own person
+            experience.<br />
+            Documentation linked here are mostly from Three.js, A-frame, and Babylon.js (I haven't tried with
+            Babylon.js,
+            but it looks good!) </br>
+            I listed some simple websites tried by myself here – they are just for experimenting with different
+            techniques
+            and still need to be improved a lot. </br>
+            Practicing with these techniques is a long-term, on-going process. I will try to update them whenever I can.
+            </br>
+            3D web development is difficult, but there’re some parts that are relatively easier to do. I only tried
+            these
+            easy ones :D Hopefully those difficult parts become easier in the future!</p>
+
+        <h2>What is WebGL?</h2>
+        <p>WebGL, short for Web Graphics Library,is a JavaScript API for rendering interactive 2D and 3D graphics within
+            any
+            compatible web browser. WebGL elements can be mixed with other HTML elements and composited with other parts
+            of
+            the page or page background.</p>
+        <p class="source"><i>Source: <a href="https://en.wikipedia.org/wiki/WebGL"> Wikipedia: WebGL</a></i></p>
+
+        <h2>What are WebGL frameworks?</h2>
+        <p>Frameworks are available to create WebGL content quickly and easily without building from the ground up.</p>
+        <p class="source"><i>Source: <a
+                    href="https://en.wikipedia.org/wiki/List_of_WebGL_frameworks#:~:text=Frameworks%20are%20available%20to%20create,building%20from%20the%20ground%20up.&text=An%20open%20source%20JavaScript%20library,using%20WebGL%2C%20developed%20by%20Ambiera.">
+                    Wikipedia: List of WebGL frameworks</a></i></p>
+        <iframe
+            src="https://en.wikipedia.org/wiki/List_of_WebGL_frameworks#:~:text=Frameworks%20are%20available%20to%20create,building%20from%20the%20ground%20up.&text=An%20open%20source%20JavaScript%20library,using%20WebGL%2C%20developed%20by%20Ambiera."
+            loading="lazy"></iframe>
+    </section>
+
+    <section>
+        <h2>Three.js, A-frame and Babylon.js</h2>
+        <h3>What is Three.js?</h3>
+        <p>Three.js is a cross-browser JavaScript library used to create and display animated 3D computer graphics in a
+            web
+            browser using WebGL. <br />It was first released by <a href="https://ricardocabello.com/">Ricardo
+                Cabello</a>,
+            aka <a href="https://mrdoob.com/">Mr.doob</a> to <a href="https://github.com/mrdoob/three.js/">Github</a> in
+            2010.</p>
+        <p class="source"><i>Source: <a href="https://en.wikipedia.org/wiki/Three.js"> Wikipedia: Three.js</a></i></p>
+
+        <h3>What is A-frame?</h3>
+        <p>A-Frame is a web framework for building virtual reality experiences. It is based on top of HTML, making
+            it simple to get started. The core is a powerful entity-component framework that provides a declarative,
+            extensible, and composable structure to three.js.</p>
+        <p class="source"><i>Source: <a href="https://aframe.io/docs/1.2.0/introduction/#what-is-a-frame"> A-frame:
+                    What is A-Frame?</a></i></p>
+
+        <h3>What is Babylon.js?</h3>
+        <p>Babylon.js is a real time 3D engine using a JavaScript library for displaying 3D graphics in a web browser
+            via
+            HTML5. The source code is available on GitHub and distributed under the Apache License 2.0.</p>
+        <p class="source"><i>Source: <a href="https://en.wikipedia.org/wiki/Babylon.js"> Wikipedia: Babylon.js</a></i>
+        </p>
+    </section>
+
+    <section>
+        <h2>Set up the scene</h2>
+        <h3> <a href="https://threejs.org/docs/#manual/en/introduction/Creating-a-scene">Create a scene with
+                Three.js</a>
+        </h3>
+        <script async src="//jsfiddle.net/fxurzeb4/embed/js,html,css,result/dark/"></script>
+
+        <h3> <a href="https://aframe.io/docs/1.2.0/guides/building-a-basic-scene.html">Create a scene with A-frame</a>
+        </h3>
+        <iframe src="https://glitch.com/edit/#!/aframe?path=index.html%3A1%3A0" loading="lazy"></iframe>
+
+        <h3> <a href="https://doc.babylonjs.com/start/chap1/first_scene">Create a scene with Babylon.js</a>
+        </h3>
+        <iframe src="https://playground.babylonjs.com/#KBS9I5" title=""></iframe>
+    </section>
+
+    <section>
+        <h2>Loading 3D models</h2>
+        <h3>Examples</h3>
+        <iframe src="https://threejs.org/examples/#webgl_animation_keyframes" loading="lazy"></iframe>
+        <iframe src="https://weedensenteret.no/" loading="lazy"></iframe>
+        <iframe src="https://giftgiving.gucci.com/#/" loading="lazy"></iframe>
+        <h3>Documentations</h3>
+        <p> <a href="https://threejs.org/docs/#manual/en/introduction/Loading-3D-models">Loading 3D models using
+                Three.js</a> </p>
+        <iframe src="https://threejs.org/docs/#manual/en/introduction/Loading-3D-models" loading="lazy"></iframe>
+        <p>Playing pre-built animations using <a href="">AnimationMixer</a></p>
+        <iframe src="https://threejs.org/docs/#api/en/animation/AnimationMixer" loading="lazy"></iframe>
+        <div class="gist-container">
+            <script
+                src="https://gist-it.appspot.com/github.com/mrdoob/three.js/blob/master/examples/webgl_animation_keyframes.html">
+            </script>
+        </div>
+
+        <p> <a href="https://threejs.org/docs/#manual/en/introduction/Loading-3D-models">Loading 3D models using
+                A-frame</a> </p>
+        <iframe src="https://aframe.io/docs/1.2.0/components/gltf-model.html#sidebar" loading="lazy"></iframe>
+        <iframe src="https://glitch.com/edit/#!/aframe-modify-model-material?path=index.html%3A1%3A0"
+            loading="lazy"></iframe>
+        <p>Playing pre-built animations using <a
+                href="https://github.com/n5ro/aframe-extras/tree/master/src/loaders#animation">the
+                animation-mixer component</a> from <a href="https://github.com/n5ro/aframe-extras">aframe-extras</a>.
+        </p>
+        <div class="gist-container">
+            <script
+                src="https://gist-it.appspot.com/https://github.com/junjie-w/experiments/blob/main/island/island.js">
+            </script>
+        </div>
+    </section>
+
+    <section>
+        <h3>Experiment: Sea & Island</h3>
+        <button id="island__load"><a href="https://junjie-w.github.io/experiments/island.html"
+                target="island__iframe">Load Content</a></button>
+        <!-- <button id="island__clear"><a href="" target="island__iframe">Clear Content</a></button> -->
+        <button id="island__clear">Clear Content</button>
+        <iframe id="island__iframe" name="island__iframe" loading="lazy"> </iframe>
+        <p>We can load models with pre-built animations, transform models, add audios, animations and event listeners to
+            them. </p>
+        <h4>What I did here:</h4>
+        <ol>
+            <li>Loaded three models from Sketchfab;</li>
+            <div class="models__island">
+                <div class="sketchfab-embed-wrapper"> <iframe title="Moomin Reanimated part" frameborder="0"
+                        allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+                        allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport
+                        execution-while-not-rendered web-share
+                        src="https://sketchfab.com/models/0852ecadb0ea443b89d16c0769001a1f/embed"> </iframe>
+                    <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
+                            href="https://sketchfab.com/3d-models/moomin-reanimated-part-0852ecadb0ea443b89d16c0769001a1f?utm_medium=embed&utm_campaign=share-popup&utm_content=0852ecadb0ea443b89d16c0769001a1f"
+                            target="_blank" style="font-weight: bold; color: #1CAAD9;"> Moomin Reanimated part </a>
+                        by
+                        <a href="https://sketchfab.com/almondfeather?utm_medium=embed&utm_campaign=share-popup&utm_content=0852ecadb0ea443b89d16c0769001a1f"
+                            target="_blank" style="font-weight: bold; color: #1CAAD9;"> AlmondFeather </a> on <a
+                            href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=0852ecadb0ea443b89d16c0769001a1f"
+                            target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p>
+                </div>
+                <div class="sketchfab-embed-wrapper"> <iframe title="Microwave Rigged (Free - NonCommercial)"
+                        frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+                        allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport
+                        execution-while-not-rendered web-share
+                        src="https://sketchfab.com/models/951cea7c961541d6a27a9d1abca27ee9/embed"> </iframe>
+                    <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
+                            href="https://sketchfab.com/3d-models/microwave-rigged-free-noncommercial-951cea7c961541d6a27a9d1abca27ee9?utm_medium=embed&utm_campaign=share-popup&utm_content=951cea7c961541d6a27a9d1abca27ee9"
+                            target="_blank" style="font-weight: bold; color: #1CAAD9;"> Microwave Rigged (Free -
+                            NonCommercial) </a> by <a
+                            href="https://sketchfab.com/dennish2010?utm_medium=embed&utm_campaign=share-popup&utm_content=951cea7c961541d6a27a9d1abca27ee9"
+                            target="_blank" style="font-weight: bold; color: #1CAAD9;"> 3DHaupt </a> on <a
+                            href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=951cea7c961541d6a27a9d1abca27ee9"
+                            target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p>
+                </div>
+                <div class="sketchfab-embed-wrapper"> <iframe title="3 seconds of vacations" frameborder="0"
+                        allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+                        allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport
+                        execution-while-not-rendered web-share
+                        src="https://sketchfab.com/models/a5b47f042b854aa887523e49af8ee8d8/embed"> </iframe>
+                    <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
+                            href="https://sketchfab.com/3d-models/3-seconds-of-vacations-a5b47f042b854aa887523e49af8ee8d8?utm_medium=embed&utm_campaign=share-popup&utm_content=a5b47f042b854aa887523e49af8ee8d8"
+                            target="_blank" style="font-weight: bold; color: #1CAAD9;"> 3 seconds of vacations </a>
+                        by
+                        <a href="https://sketchfab.com/JonhGillessen?utm_medium=embed&utm_campaign=share-popup&utm_content=a5b47f042b854aa887523e49af8ee8d8"
+                            target="_blank" style="font-weight: bold; color: #1CAAD9;"> JonhGillessen </a> on <a
+                            href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=a5b47f042b854aa887523e49af8ee8d8"
+                            target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p>
+                </div>
+            </div>
+            <li>Control model animations using animation-mixer component;</li>
+            <li>Added sea</li>
+            <li>Added sounds with animations;</li>
+            <li>Changed the color of one mesh of the island model;</li>
+            <li>Added spheres, lights and shadows;</li>
+            <li>Added one <a href="https://threejs.org/docs/#api/en/geometries/CircleGeometry">CircleGeometry</a>, with
+                material as an image of a clock, using Three.js;</li>
+            <div class="island__files">
+                <div class="gist-container">
+                    <script
+                        src="https://gist-it.appspot.com/https://github.com/junjie-w/experiments/blob/main/island.html">
+                    </script>
+                </div>
+                <div class="gist-container">
+                    <script
+                        src="https://gist-it.appspot.com/https://github.com/junjie-w/experiments/blob/main/island/island.js">
+                    </script>
+                </div>
+            </div>
+        </ol>
+        <h4>Side notes</h4>
+        <p>Loading these models could be slow → probably need to design a loading screen
+            Audio will change volume when it’s getting closer/further to/from the user. This depends on which mesh/model
+            it is attached to, and what movements that mesh/model has.
+            Volume control button gives users options to have sounds on or off.
+            There are some common patterns we can see from example websites: subtle rotation, particles,
+            models/meshes/particles change position along with mouse movement, etc. good or bad...? it should make
+            sense...
+        </p>
+    </section>
+
+    <section>
+        <h2>Light and Shadow</h2>
+        <h3>Examples</h3>
+        <iframe src="https://threejs.org/examples/#webgl_animation_skinning_blending" loading="lazy"></iframe>
+        <h3>Documentations</h3>
+
+        <p> <a href="https://threejs.org/docs/?q=light#api/en/lights/AmbientLight">Lights</a> and <a
+                href="https://threejs.org/docs/index.html?q=shadow#api/en/lights/shadows/LightShadow">shadows</a> in
+            Three.js</p>
+        <iframe src="https://threejs.org/docs/?q=light#api/en/lights/AmbientLight" loading="lazy"></iframe>
+        <iframe src="https://threejs.org/docs/?q=light#api/en/lights/AmbientLight" loading="lazy"></iframe>
+
+        <p> <a href="https://aframe.io/docs/1.2.0/components/light.html#sidebar">Lights</a> and <a
+                href="https://aframe.io/docs/1.2.0/components/shadow.html#sidebar">shadows</a> in A-frame</p>
+        <iframe src="https://aframe.io/docs/1.2.0/components/light.html#sidebar" loading="lazy"></iframe>
+        <iframe src="https://aframe.io/docs/1.2.0/components/shadow.html#sidebar" loading="lazy"></iframe>
+
+        <p> <a href="https://doc.babylonjs.com/divingDeeper/lights/lights_introduction">Lights</a> and <a
+                href="https://doc.babylonjs.com/divingDeeper/lights/shadows">shadows</a> in
+            Babylon.js</p>
+        <iframe src="https://doc.babylonjs.com/divingDeeper/lights/lights_introduction" loading="lazy"></iframe>
+        <iframe src="https://doc.babylonjs.com/divingDeeper/lights/shadows" loading="lazy"></iframe>
+    </section>
+
+    <section>
+        <h3>Experiment: Light & Shadow</h3>
+        <button id="shadow__load"><a href="https://junjie-w.github.io/experiments/shadow.html"
+                target="shadow__iframe">Load Content</a></button>
+        <!-- <button id="island__clear"><a href="" target="island__iframe">Clear Content</a></button> -->
+        <button id="shadow__clear">Clear Content</button>
+        <iframe id="shadow__iframe" name="shadow__iframe" loading="lazy"> </iframe>
+        <p>Lorem ipsum, dolor sit amet consectetur adiptis blanditiis similique incidunt fdipisci perferendis ipsa,
+            quidem excepturi labore?</p>
+        <h4>What I did here:</h4>
+        <ol>
+            <li>Loaded three models from Sketchfab;</li>
+            <div class="models__island">
+                <div class="sketchfab-embed-wrapper"> <iframe title="Traffic Light" frameborder="0" allowfullscreen
+                        mozallowfullscreen="true" webkitallowfullscreen="true" allow="fullscreen; autoplay; vr"
+                        xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
+                        src="https://sketchfab.com/models/e512a5adb1904a71a1bd53c4a21b48d4/embed"> </iframe>
+                    <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
+                            href="https://sketchfab.com/3d-models/traffic-light-e512a5adb1904a71a1bd53c4a21b48d4?utm_medium=embed&utm_campaign=share-popup&utm_content=e512a5adb1904a71a1bd53c4a21b48d4"
+                            target="_blank" style="font-weight: bold; color: #1CAAD9;"> Traffic Light </a> by <a
+                            href="https://sketchfab.com/gadsby?utm_medium=embed&utm_campaign=share-popup&utm_content=e512a5adb1904a71a1bd53c4a21b48d4"
+                            target="_blank" style="font-weight: bold; color: #1CAAD9;"> gadsby </a> on <a
+                            href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=e512a5adb1904a71a1bd53c4a21b48d4"
+                            target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p>
+                </div>
+                <div class="sketchfab-embed-wrapper"> <iframe title="Suburban Street Lamp" frameborder="0"
+                        allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+                        allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport
+                        execution-while-not-rendered web-share
+                        src="https://sketchfab.com/models/fdc8b5ba548243448f9b918ea7892786/embed"> </iframe>
+                    <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
+                            href="https://sketchfab.com/3d-models/suburban-street-lamp-fdc8b5ba548243448f9b918ea7892786?utm_medium=embed&utm_campaign=share-popup&utm_content=fdc8b5ba548243448f9b918ea7892786"
+                            target="_blank" style="font-weight: bold; color: #1CAAD9;"> Suburban Street Lamp </a> by <a
+                            href="https://sketchfab.com/gadsby?utm_medium=embed&utm_campaign=share-popup&utm_content=fdc8b5ba548243448f9b918ea7892786"
+                            target="_blank" style="font-weight: bold; color: #1CAAD9;"> gadsby </a> on <a
+                            href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=fdc8b5ba548243448f9b918ea7892786"
+                            target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p>
+                </div>
+                <div class="sketchfab-embed-wrapper"> <iframe title="Snowman" frameborder="0" allowfullscreen
+                        mozallowfullscreen="true" webkitallowfullscreen="true" allow="fullscreen; autoplay; vr"
+                        xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
+                        src="https://sketchfab.com/models/95b6485c508c4b068d683dda16a33252/embed"> </iframe>
+                    <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
+                            href="https://sketchfab.com/3d-models/snowman-95b6485c508c4b068d683dda16a33252?utm_medium=embed&utm_campaign=share-popup&utm_content=95b6485c508c4b068d683dda16a33252"
+                            target="_blank" style="font-weight: bold; color: #1CAAD9;"> Snowman </a> by <a
+                            href="https://sketchfab.com/PatelDev?utm_medium=embed&utm_campaign=share-popup&utm_content=95b6485c508c4b068d683dda16a33252"
+                            target="_blank" style="font-weight: bold; color: #1CAAD9;"> PatelDev </a> on <a
+                            href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=95b6485c508c4b068d683dda16a33252"
+                            target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p>
+                </div>
+            </div>
+            <li>Added particles to the scene using <a
+                    href="https://www.npmjs.com/package/aframe-particle-system-component">aframe-particle-system-component;</a>
+            </li>
+            <li>Added one pointLight and one spotLight for each light source of the street lamp and traffic lights;</li>
+            <li>Added animation to the lights;</li>
+            <li>Added animation to the snowman;</li>
+            <li>Added a bit of physics effects using <a
+                    href="https://github.com/n5ro/aframe-physics-system">aframe-physics-system</a></li>
+            <li>Added spheres, lights and shadows;</li>
+
+            <div class="island__files">
+                <div class="gist-container">
+                    <script
+                        src="https://gist-it.appspot.com/https://github.com/junjie-w/experiments/blob/main/shadow.html">
+                    </script>
+                </div>
+                <div class="gist-container">
+                    <script
+                        src="https://gist-it.appspot.com/https://github.com/junjie-w/experiments/blob/main/shadow/shadow.js">
+                    </script>
+                </div>
+            </div>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Particles</h2>
+        <h3>Examples</h3>
+        <iframe src="https://pendereckisgarden.pl/en/the-maestros-manor" loading="lazy"></iframe>
+        <h3>Online Tutorials and Documentations</h3>
+        <p> <a href="https://aerotwist.com/tutorials/creating-particles-with-three-js/">Creating particles with Three.js
+            </a></p>
+        <iframe src="https://aerotwist.com/tutorials/creating-particles-with-three-js/" loading="lazy"></iframe>
+
+        <p> <a href="https://doc.babylonjs.com/divingDeeper/particles/particle_system/particle_system_intro">Particle
+                systems</a> in Babylon.js</p>
+        <iframe src="https://doc.babylonjs.com/divingDeeper/particles/particle_system/particle_system_intro"
+            loading="lazy"></iframe>
+
+        <p><a href="https://www.npmjs.com/package/aframe-particle-system-component">Aframe-particle-system-component</a>
+            for A-frame</p>
+        <iframe src="https://www.npmjs.com/package/aframe-particle-system-component" loading="lazy"></iframe>
+
+        <p><a href="https://www.vantajs.com/">Vanta.js</a> </p>
+        <iframe src="https://www.vantajs.com/" loading="lazy"></iframe>
+
+        <p><a href="https://www.particles3d.com/">Vanta.js</a> </p>
+        <iframe src="https://www.particles3d.com/" loading="lazy"></iframe>
+
+    </section>
+
+    <section>
+        <h3>Experiment: Particles</h3>
+        <button id="particles__load"><a href="https://junjie-w.github.io/experiments/particles.html"
+                target="particles__iframe">Load Content</a></button>
+        <!-- <button id="island__clear"><a href="" target="island__iframe">Clear Content</a></button> -->
+        <button id="particles__clear">Clear Content</button>
+        <iframe id="particles__iframe" name="particles__iframe" loading="lazy"> </iframe>
+        <p>Lorem ipsum, dolor sit amet consectetur adiptis blanditiis similique incidunt fdipisci perferendis ipsa,
+            quidem excepturi labore?</p>
+        <h4>What I did here:</h4>
+        <ol>
+            <li>Loaded three models from Sketchfab;</li>
+
+            <li>Added particles to the scene using <a
+                    href="https://www.npmjs.com/package/aframe-particle-system-component">aframe-particle-system-component;</a>
+            </li>
+            <li>Added one pointLight and one spotLight for each light source of the street lamp and traffic lights;</li>
+            <li>Added animation to the lights;</li>
+            <li>Added animation to the snowman;</li>
+            <li>Added a bit of physics effects using <a
+                    href="https://github.com/n5ro/aframe-physics-system">aframe-physics-system</a></li>
+            <li>Added spheres, lights and shadows;</li>
+
+            <div class="island__files">
+                <div class="gist-container">
+                    <script
+                        src="https://gist-it.appspot.com/https://github.com/junjie-w/experiments/blob/main/particles.html">
+                    </script>
+                </div>
+                <div class="gist-container">
+                    <script
+                        src="https://gist-it.appspot.com/https://github.com/junjie-w/experiments/blob/main/particles/particles.js">
+                    </script>
+                </div>
+            </div>
+        </ol>
+    </section>
+
+    <iframe src="https://threejs.org/examples/#webgl_animation_skinning_blending" title="importing models"></iframe>
+    <iframe src="https://junjie-w.github.io/experiments/shadow.html" title="importing models"></iframe>
+    <iframe src="https://pendereckisgarden.pl/en/the-maestros-manor" title="importing models"></iframe>
+    <iframe src="https://threejs.org/examples/#webgl_animation_cloth" title="importing models"></iframe>
+    <iframe src="https://lusion.co/" title="importing models"></iframe>
+    <iframe src="https://prior.co.jp/discover/en" title="importing models"></iframe>
+    <iframe src="https://go.pioneer.com/cornrevolution" title="importing models"></iframe>
+    <iframe src="https://richardmattka.com/" title="importing models"></iframe>
+    <iframe src="https://chartogne-taillet.com/en" title="importing models"></iframe>
+    <iframe src="https://uxblon.de/index.html" title="importing models"></iframe>
+
+
+    <h1></h1>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
