@@ -15,13 +15,15 @@ island__clear.addEventListener("click", () => {
 const shadow__load = document.getElementById("shadow__load");
 const shadow__clear = document.getElementById("shadow__clear");
 const shadow__iframe = document.getElementById('shadow__iframe');
-island__clear.addEventListener("click", () => {
-    island__iframe.classList.add("iframe-small")
+island__load.addEventListener("click", () => {
+    island__iframe.classList.add("iframe-big")
 })
 
-island__load.addEventListener("click", () => {
-    island__iframe.classList.remove("iframe-small")
+island__clear.addEventListener("click", () => {
+    island__iframe.classList.remove("iframe-big")
 })
+
+
 
 shadow__clear.addEventListener("click", () => {
     shadow__iframe.contentWindow.location.replace("about: blank");
