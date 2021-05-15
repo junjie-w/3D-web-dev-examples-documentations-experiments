@@ -63,8 +63,13 @@
                 </ul>
             </li>
             <li class="demo">
-                <a href="#otherExamples">
-                    <span class="demoLink">Other Examples</span>
+                <a href="#otherEffects">
+                    <span class="demoLink">Other Effects</span>
+                </a>
+            </li>
+            <li class="demo">
+                <a href="#resources">
+                    <span class="demoLink">Resources</span>
                 </a>
             </li>
         </ul>
@@ -890,42 +895,79 @@
         <h2 id="otherEffects">Some other effects that I haven't tried</h2>
         <h3>Examples</h3>
         <p> <a href="https://aframe.io/examples/showcase/sky/"> 360° image with A-frame </a></p>
-        <iframe src="https://aframe.io/examples/showcase/sky/" loading="lazy"></iframe>
+
+        <div class="loadAndClear">
+            <a id="effect1__load" class="loadButton" href="https://aframe.io/examples/showcase/sky/"
+                target="effect1__iframe">Load
+                Content</a>
+            <a id="effect1__clear" class="clearButton" href="iframeBg.html" target="effect1__iframe">Close
+                Content</a>
+        </div>
+        <iframe src="iframeBg.html" loading="lazy" id="effect1__iframe" name="effect1__iframe"
+            class="loading-iframe"></iframe>
 
         <p> <a href="https://threejs.org/examples/webgl_postprocessing_crossfade.html"> Scenes transition with
                 Three.js
             </a></p>
-        <iframe src="https://threejs.org/examples/webgl_postprocessing_crossfade.html" loading="lazy"></iframe>
+
+        <div class="loadAndClear">
+            <a id="effect2__load" class="loadButton"
+                href="https://threejs.org/examples/webgl_postprocessing_crossfade.html" target="effect2__iframe">Load
+                Content</a>
+            <a id="effect2__clear" class="clearButton" href="iframeBg.html" target="effect2__iframe">Close
+                Content</a>
+        </div>
+        <iframe src="iframeBg.html" loading="lazy" id="effect2__iframe" name="effect2__iframe"
+            class="loading-iframe"></iframe>
 
         <p> <a href="https://www.midwam.com/en"> Shader - looks pretty difficult - Shaders are written in the C-like
                 language GLSL </a></p>
-        <iframe src="https://www.midwam.com/en" loading="lazy"></iframe>
+
+        <div class="loadAndClear">
+            <a id="effect3__load" class="loadButton" href="https://www.midwam.com/en" target="effect3__iframe">Load
+                Content</a>
+            <a id="effect3__clear" class="clearButton" href="iframeBg.html" target="effect3__iframe">Close
+                Content</a>
+        </div>
+        <iframe src="iframeBg.html" loading="lazy" id="effect3__iframe" name="effect3__iframe"
+            class="loading-iframe"></iframe>
 
         <p> <a href="http://letsplay.ouigo.com/"> Physics (such as gravity and collisions)</a></p>
-        <iframe src="http://letsplay.ouigo.com/" loading="lazy"></iframe>
+        <div class="loadAndClear">
+            <a id="effect4__load" class="loadButton" href="https://tympanus.net/Tutorials/PhysicsMenu/"
+                target="effect4__iframe">Load
+                Content</a>
+            <a id="effect4__clear" class="clearButton" href="iframeBg.html" target="effect4__iframe">Close
+                Content</a>
+        </div>
+        <iframe src="iframeBg.html" loading="lazy" id="effect4__iframe" name="effect4__iframe"
+            class="loading-iframe"></iframe>
+        <p>Another example: <a href="http://letsplay.ouigo.com/">Let's Play</a> (please open the link
+            in a new tab)</p>
         <p>Some of the 3D physics engines for Javascript: </p>
-        <a href="https://github.com/kripken/ammo.js/">Ammo.js</a>
-        <a href="https://lo-th.github.io/Oimo.js/#basic">Oimo.js</a>
-        <a href="https://schteppe.github.io/cannon.js/">Cannon.js</a>
+        <p><a href="https://github.com/kripken/ammo.js/">Ammo.js</a></p>
+        <p><a href="https://lo-th.github.io/Oimo.js/#basic">Oimo.js</a></p>
+        <p><a href="https://schteppe.github.io/cannon.js/">Cannon.js</a></p>
     </section>
 
-    <section>
-        <h2 id="otherExamples">Other examples for interactive 3D backgrounds/elements</h2>
-        <h3>Examples</h3>
-        <iframe src="https://go.pioneer.com/cornrevolution" loading="lazy"></iframe>
-        <iframe src="https://richardmattka.com/" loading="lazy"></iframe>
-        <iframe src="https://chartogne-taillet.com/en" loading="lazy"></iframe>
-        <iframe src="https://uxblon.de/index.html" loading="lazy"></iframe>
+    <hr>
 
-        <h3>Online Tutorial</h3>
+    <section id="resources">
+        <h2>Resources</h2>
+
+        <h3>More Examples for interactive 3D backgrounds/elements</h3>
+        <p><a href="https://chartogne-taillet.com/en">Chartogne Taillet</a></p>
+        <p><a href="https://umamiland.withgoogle.com/en">Umamiland</a></p>
+        <p><a href="https://lifeinvogue.vogue.it/">Life in Vogue </a></p>
+        <p><a href="https://annoyingmuseum.zendesk.com/">Annoying Museum</a></p>
+        <p><a href="https://go.pioneer.com/cornrevolution">Corn Revolution</a></p>
+        <p><a href="https://richardmattka.com/">Richard Mattka</a></p>
+        <p><a href="https://uxblon.de/index.html">Uxblon</a></p>
+
+        <h3>Online Tutorials</h3>
+        <p><a href="https://threejsfundamentals.org/">Three.js Fundamentals</a></p>
         <p> <a href="https://tympanus.net/codrops/2017/11/28/decorative-webgl-backgrounds/">Interactive 3D
-                background
-                with Three.js </a></p>
-        <iframe src="https://tympanus.net/codrops/2017/11/28/decorative-webgl-backgrounds/" loading="lazy"></iframe>
-    </section>
-
-    <section>
-        <h2>resources</h2>
+                background with Three.js </a></p>
     </section>
 
     <script src="app.js"></script>
