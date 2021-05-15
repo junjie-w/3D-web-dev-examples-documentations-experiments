@@ -10,7 +10,6 @@
 </head>
 
 <body>
-    <!-- <section class="navContainer"> -->
     <div class="nav">
         <ul class="nav__ul">
             <li class="demo">
@@ -19,8 +18,8 @@
                 </a>
             </li>
             <li class="demo">
-                <a href="shadow.html">
-                    <span class="demoLink">Light & shadow</span>
+                <a href="#createScene">
+                    <span class="demoLink">Create a scene</span>
                 </a>
             </li>
             <li class="demo">
@@ -50,55 +49,50 @@
             </li>
         </ul>
     </div>
-    <!-- </section> -->
 
-    <!-- <section class="content"> -->
-    <section>
-        <h1 class="title" id="readme">3D web development: some examples, methods, and experiments</h1>
+    <section class="readme-container" id="readme">
+        <h1 class="title">3D Web Development: Examples, Methods, and Experiments</h1>
 
-        <p>This is a simple collection of 3D web development techniques, and it's only based on my own person
-            experience.<br />
-            Documentation linked here are mostly from Three.js, A-frame, and Babylon.js (I haven't tried with
-            Babylon.js,
-            but it looks good!) </br>
-            I listed some simple websites tried by myself here – they are just for experimenting with different
-            techniques
-            and still need to be improved a lot. </br>
-            Practicing with these techniques is a long-term, on-going process. I will try to update them whenever I
-            can.
-            </br>
-            3D web development is difficult, but there’re some parts that are relatively easier to do. I only tried
-            these
-            easy ones :D Hopefully those difficult parts become easier in the future!</p>
+        <p>This is a simple collection of 3D (mostly using WebGL frameworks) web development techniques. It's only based
+            on my personal experience and will be updated whenever I can:)<br />
+            Documentations linked here are mostly from Three.js, A-frame, and Babylon.js.</br>
+            I also listed some simple websites tried by myself here – they are just for experimenting with different
+            techniques and the code sippets still need to be improved a lot. </br>
+            Practicing with these techniques is a long-term, on-going process. 3D web development is difficult, but
+            there’re some parts that are relatively easier to do. I have only tried these easy ones :D Hopefully those
+            difficult parts become easier in the future!</p>
 
         <h2>What is WebGL?</h2>
         <p>WebGL, short for Web Graphics Library,is a JavaScript API for rendering interactive 2D and 3D graphics
-            within
-            any
-            compatible web browser. WebGL elements can be mixed with other HTML elements and composited with other
-            parts
-            of
-            the page or page background.</p>
+            within any compatible web browser. WebGL elements can be mixed with other HTML elements and composited with
+            other parts of the page or page background.</p>
+        <ul>
+            <li>It renders triangles at a remarkable speed.</li>
+            <li>It uses the Graphic Processing Unit (GPU).</li>
+        </ul>
         <p class="source"><i>Source: <a href="https://en.wikipedia.org/wiki/WebGL"> Wikipedia: WebGL</a></i></p>
 
         <h2>What are WebGL frameworks?</h2>
-        <p>Frameworks are available to create WebGL content quickly and easily without building from the ground up.
+        <p>WebGL Frameworks help us to create WebGL content quickly and easily without building from the ground up.
         </p>
         <p class="source"><i>Source: <a
                     href="https://en.wikipedia.org/wiki/List_of_WebGL_frameworks#:~:text=Frameworks%20are%20available%20to%20create,building%20from%20the%20ground%20up.&text=An%20open%20source%20JavaScript%20library,using%20WebGL%2C%20developed%20by%20Ambiera.">
                     Wikipedia: List of WebGL frameworks</a></i></p>
-        <iframe
-            src="https://en.wikipedia.org/wiki/List_of_WebGL_frameworks#:~:text=Frameworks%20are%20available%20to%20create,building%20from%20the%20ground%20up.&text=An%20open%20source%20JavaScript%20library,using%20WebGL%2C%20developed%20by%20Ambiera."
-            loading="lazy"></iframe>
-    </section>
+        <div class="loadAndClear">
+            <a id="frameworks__load" class="loadButton"
+                href="https://en.wikipedia.org/wiki/List_of_WebGL_frameworks#:~:text=Frameworks%20are%20available%20to%20create,building%20from%20the%20ground%20up.&text=An%20open%20source%20JavaScript%20library,using%20WebGL%2C%20developed%20by%20Ambiera."
+                target="frameworks__iframe">Load Content</a>
+            <a id="frameworks__clear" class="clearButton" href="iframeBg.html" target="frameworks__iframe">Close
+                Content</a>
+        </div>
+        <iframe src="iframeBg.html" id="island__iframe" class="loading-iframe" name="frameworks__iframe" loading="lazy">
+        </iframe>
 
-    <section>
         <h2>Three.js, A-frame and Babylon.js</h2>
         <h3>What is Three.js?</h3>
-        <p>Three.js is a cross-browser JavaScript library used to create and display animated 3D computer graphics
-            in a
-            web
-            browser using WebGL. <br />It was first released by <a href="https://ricardocabello.com/">Ricardo
+        <p><a href="https://threejs.org/">Three.js</a> is a cross-browser JavaScript library used to create and display
+            animated 3D computer graphics in a web browser using WebGL. <br />It was first released by <a
+                href="https://ricardocabello.com/">Ricardo
                 Cabello</a>,
             aka <a href="https://mrdoob.com/">Mr.doob</a> to <a href="https://github.com/mrdoob/three.js/">Github</a> in
             2010.</p>
@@ -106,28 +100,38 @@
         </p>
 
         <h3>What is A-frame?</h3>
-        <p>A-Frame is a web framework for building virtual reality experiences. It is based on top of HTML, making
-            it simple to get started. The core is a powerful entity-component framework that provides a declarative,
-            extensible, and composable structure to three.js.</p>
+        <p><a href="https://aframe.io/">A-Frame</a> is a web framework for building virtual reality experiences. It is
+            based on top of HTML, making it simple to get started. The core is a powerful entity-component framework
+            that provides a declarative, extensible, and composable structure to three.js. → <a
+                href="https://github.com/aframevr/aframe">Github repository</a></p>
         <p class="source"><i>Source: <a href="https://aframe.io/docs/1.2.0/introduction/#what-is-a-frame"> A-frame:
                     What is A-Frame?</a></i></p>
 
         <h3>What is Babylon.js?</h3>
-        <p>Babylon.js is a real time 3D engine using a JavaScript library for displaying 3D graphics in a web
-            browser
-            via
-            HTML5. The source code is available on GitHub and distributed under the Apache License 2.0.</p>
+        <p><a href="https://www.babylonjs.com/">Babylon.js</a> is a real time 3D engine using a JavaScript library for
+            displaying 3D graphics in a web browser via HTML5. The <a
+                href="https://github.com/BabylonJS/Babylon.js">source code</a> is available on GitHub and distributed
+            under the Apache License 2.0.</p>
         <p class="source"><i>Source: <a href="https://en.wikipedia.org/wiki/Babylon.js"> Wikipedia:
                     Babylon.js</a></i>
         </p>
     </section>
 
-    <section>
-        <h2>Set up the scene</h2>
+    <hr>
+
+    <section class="createScene-container" id="createScene">
+        <h2>Create a scene</h2>
         <h3> <a href="https://threejs.org/docs/#manual/en/introduction/Creating-a-scene">Create a scene with
                 Three.js</a>
         </h3>
-        <script async src="//jsfiddle.net/fxurzeb4/embed/js,html,css,result/dark/"></script>
+        <div class="loadAndClear">
+            <a id="frameworks__load" class="loadButton" href="//jsfiddle.net/fxurzeb4/embed/js,html,css,result/dark/"
+                target="sceneThree__iframe">Load Content</a>
+            <a id="frameworks__clear" class="clearButton" href="iframeBg.html" target="sceneThree__iframe">Close
+                Content</a>
+        </div>
+        <script async src="//jsfiddle.net/fxurzeb4/embed/js,html,css,result/dark/" class="loading-iframe"
+            name="sceneThree__iframe"></script>
 
         <h3> <a href="https://aframe.io/docs/1.2.0/guides/building-a-basic-scene.html">Create a scene with
                 A-frame</a>
@@ -175,10 +179,12 @@
 
     <section>
         <h3>Experiment: Sea & Island</h3>
-        <button id="island__load" class="loadButton"><a href="https://junjie-w.github.io/experiments/island.html"
-                target="island__iframe">Load Content</a></button>
-        <button id="island__clear" class="closeButton"><a href="iframeBg.html" target="island__iframe">Clear
-                Content</a></button>
+        <div class="loadAndClear">
+            <button id="island__load" class="loadButton"><a href="https://junjie-w.github.io/experiments/island.html"
+                    target="island__iframe">Load Content</a></button>
+            <button id="island__clear" class="clearButton"><a href="iframeBg.html" target="island__iframe">Clear
+                    Content</a></button>
+        </div>
         <iframe src="iframeBg.html" id="island__iframe" name="island__iframe" loading="lazy"> </iframe>
         <p>We can load models with pre-built animations, transform models, add audios, animations and event
             listeners to
@@ -517,7 +523,10 @@
         <a href="https://lo-th.github.io/Oimo.js/#basic">Oimo.js</a>
         <a href="https://schteppe.github.io/cannon.js/">Cannon.js</a>
     </section>
-    <!-- </section> -->
+
+    <section>
+        <h2>resources</h2>
+    </section>
 
     <script src="app.js"></script>
 </body>
