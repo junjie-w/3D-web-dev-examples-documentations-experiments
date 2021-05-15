@@ -11,6 +11,7 @@ body {
 hr {
     width: 5%;
     border-top: 1px solid lightgrey;
+    margin: 2.5vw auto;
 }
 
 section {
@@ -58,10 +59,24 @@ p {
     font-size: 1vw;
 }
 
-.models__island,
+/* .models__island, */
 .island__files {
     display: flex;
     justify-content: space-between;
+}
+
+.island__file1,
+.island__file2 {
+    flex: 0.5;
+    width: 28vw;
+}
+
+.island__file1 {
+    margin-right: 3px;
+}
+
+.island__file2 {
+    margin-left: 3px;
 }
 
 .iframe-small {
@@ -95,6 +110,13 @@ p {
 .nav ul li {
     width: 100%;
     list-style: none;
+    margin: 0.7vw 0.7vw 0.7vw 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+ul li {
+    list-style-type: circle;
+    width: 100%;
     margin: 0.7vw 0.7vw 0.7vw 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -149,4 +171,68 @@ p {
 .loadAndClear {
     display: flex;
     justify-content: center;
+}
+
+.loadButton--jsfiddle,
+.clearButton--jsfiddle {
+    cursor: pointer;
+    border: 1px solid #333;
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.09);
+    background-color: white;
+    border-radius: 0.8vw;
+    border-radius: 15px;
+    padding: 5px 18px;
+    /* padding: 0.25vw 0.85vw; */
+    font-size: max(0.8vw, 12px);
+    margin: 0 1vw;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.loadButton--jsfiddle:hover,
+.clearButton--jsfiddle:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.1), 0 2px 4px 0 rgba(0, 0, 0, 0.09);
+}
+
+.loadButton--jsfiddle:active,
+.clearButton--jsfiddle:active {
+    transform: scale(0.98);
+}
+
+.jsfiddle-iframes {
+    position: relative;
+}
+
+.loading-script--jsfiddle {
+    display: none;
+    width: 100%;
+    height: 2vw;
+    transition: all 1s;
+}
+
+.loading-script--jsfiddle iframe {
+    height: 80vh;
+    transition: all 1s;
+}
+
+.script--jsfiddle iframe {
+    /* height: 80vh; */
+    transition: all 1s;
+    height: 100%;
+}
+
+.loading-script--jsfiddle,
+.loading-iframe--jsfiddle,
+.script--jsfiddle {
+    transition: all 1s;
+}
+
+.display {
+    display: inline-block;
+    height: 80vh;
+}
+
+.hide {
+    display: none;
+    height: 2vw;
 }

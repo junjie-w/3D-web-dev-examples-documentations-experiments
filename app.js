@@ -41,10 +41,34 @@ closeButtons__array.map((button, index) => button.addEventListener("click", () =
     iframeCounts__array[index].classList.remove("iframe-big")
 }))
 
-// loadButtons[i].addEventListener("click", () => {
-//     iframeCounts[i].classList.add("iframe-big")
+
+const scriptLoadButtons = document.getElementsByClassName("loadButton--jsfiddle");
+const scriptCloseButtons = document.getElementsByClassName("clearButton--jsfiddle");
+const loadingScripts = document.getElementsByClassName("loading-script--jsfiddle");
+const loadingIframes = document.getElementsByClassName("loading-iframe--jsfiddle");
+
+const scriptLoadButtons__array = Array.prototype.slice.call(scriptLoadButtons)
+const scriptCloseButtons__array = Array.prototype.slice.call(scriptCloseButtons)
+const loadingScripts__array = Array.prototype.slice.call(loadingScripts)
+const loadingIframes__array = Array.prototype.slice.call(loadingIframes)
+
+scriptLoadButtons__array.map((button, index) => button.addEventListener("click", () => {
+    loadingScripts__array[index].classList.add("display")
+    loadingIframes__array[index].classList.add("hide")
+}))
+scriptCloseButtons__array.map((button, index) => button.addEventListener("click", () => {
+    loadingScripts__array[index].classList.remove("display")
+    loadingIframes__array[index].classList.remove("hide")
+}))
+
+// document.querySelector(".loadButton--jsfiddle").addEventListener("click", () => {
+//     // document.querySelector(".loading-script--jsfiddle").style.display = "inline-block"
+//     // document.querySelector(".loading-iframe--jsfiddle").style.display = "none"
+//     document.querySelector(".loading-script--jsfiddle").classList.add("display")
+//     document.querySelector(".loading-iframe--jsfiddle").classList.add("hide")
 // })
 
-// closeButtons[i].addEventListener("click", () => {
-//     iframeCounts[i].classList.remove("iframe-big")
+// document.querySelector(".clearButton--jsfiddle").addEventListener("click", () => {
+//     document.querySelector(".loading-script--jsfiddle").classList.remove("display")
+//     document.querySelector(".loading-iframe--jsfiddle").classList.remove("hide")
 // })
