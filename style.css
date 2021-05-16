@@ -336,3 +336,7 @@ p {
         display: inline-block;
     }
 }
+
+.nav-subtitle {
+    padding-top: 15px;
+}
