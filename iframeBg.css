@@ -22,6 +22,7 @@ body {
 svg {}
 
 .bg-click-text {
+    text-align: center;
     margin: 0;
     z-index: 1;
     color: #fff;

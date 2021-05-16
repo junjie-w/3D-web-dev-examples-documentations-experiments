@@ -54,10 +54,12 @@ const loadingIframes__array = Array.prototype.slice.call(loadingIframes)
 
 scriptLoadButtons__array.map((button, index) => button.addEventListener("click", () => {
     loadingScripts__array[index].classList.add("display")
+    // loadingScripts__array[index].querySelector("iframe").classList.add("display")
     loadingIframes__array[index].classList.add("hide")
 }))
 scriptCloseButtons__array.map((button, index) => button.addEventListener("click", () => {
     loadingScripts__array[index].classList.remove("display")
+    // loadingScripts__array[index].querySelector("iframe").classList.remove("display")
     loadingIframes__array[index].classList.remove("hide")
 }))
 
