@@ -6,975 +6,1019 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="nav">
+        <div class="hamburger">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+        </div>
         <ul class="nav__ul">
             <li class="demo">
-                <a href="#readme">
-                    <span class="demoLink">read me</span>
-                </a>
+                <a href="#readme" class="demoLink"> read me </a>
             </li>
             <li class="demo">
-                <a href="#createScene">
-                    <span class="demoLink">Create A Scene</span>
-                </a>
+                <a href="#createScene" class="demoLink"> Create A Scene </a>
             </li>
             <li class="demo">
-                <a href="#loadingModels">
-                    <span class="demoLink">Loading 3D Models</span>
-                </a>
-                <ul>
-                    <li> <a href="#loadingModels-examples">Examples</a> </li>
-                    <li> <a href="#loadingModels-documentations">Documentations</a> </li>
-                    <li> <a href="#loadingModels-experiments">Experiments</a> </li>
+                <a href="#loadingModels" class="demoLink"> Loading 3D Models </a>
+                <ul class="subList">
+                    <li> <a href="#loadingModels-examples" class="demoLink">Examples</a> </li>
+                    <li> <a href="#loadingModels-documentations" class="demoLink">Documentations</a> </li>
+                    <li> <a href="#loadingModels-experiments" class="demoLink">Experiments</a> </li>
                 </ul>
             </li>
             <li class="demo">
-                <a href="#lightShadow">
-                    <span class="demoLink">Light and Shadow</span>
-                </a>
-                <ul>
-                    <li> <a href="#lightShadow-examples">Examples</a> </li>
-                    <li> <a href="#lightShadow-documentations">Documentations</a> </li>
-                    <li> <a href="#lightShadow-experiments">Experiments</a> </li>
+                <a href="#lightShadow" class="demoLink"> Light and Shadow </a>
+                <ul class="subList">
+                    <li> <a href="#lightShadow-examples" class="demoLink">Examples</a> </li>
+                    <li> <a href="#lightShadow-documentations" class="demoLink">Documentations</a> </li>
+                    <li> <a href="#lightShadow-experiments" class="demoLink">Experiments</a> </li>
                 </ul>
             </li>
             <li class="demo">
-                <a href="#particles">
-                    <span class="demoLink">Particles</span>
-                </a>
-                <ul>
-                    <li> <a href="#particles-examples">Examples</a> </li>
-                    <li> <a href="#particles-documentations">Documentations</a> </li>
-                    <li> <a href="#particles-experiments">Experiments</a> </li>
+                <a href="#particles" class="demoLink"> Particles </a>
+                <ul class="subList">
+                    <li> <a href="#particles-examples" class="demoLink">Examples</a> </li>
+                    <li> <a href="#particles-documentations" class="demoLink">Documentations</a> </li>
+                    <li> <a href="#particles-experiments" class="demoLink">Experiments</a> </li>
                 </ul>
             </li>
             <li class="demo">
-                <a href="#clothSimulation">
-                    <span class="demoLink">Cloth Simulation</span>
-                </a>
-                <ul>
-                    <li> <a href="#clothSimulation-examples">Examples</a> </li>
-                    <li> <a href="#clothSimulation-tutorials">Tutorials</a> </li>
-                    <li> <a href="#clothSimulation-experiments">Experiments</a> </li>
+                <a href="#clothSimulation" class="demoLink"> Cloth Simulation </a>
+                <ul class="subList">
+                    <li> <a href="#clothSimulation-examples" class="demoLink">Examples</a> </li>
+                    <li> <a href="#clothSimulation-tutorials" class="demoLink">Tutorials</a> </li>
+                    <li> <a href="#clothSimulation-experiments" class="demoLink">Experiments</a> </li>
                 </ul>
             </li>
             <li class="demo">
-                <a href="#otherEffects">
-                    <span class="demoLink">Other Effects</span>
-                </a>
+                <a href="#otherEffects" class="demoLink"> Other Effects </a>
             </li>
             <li class="demo">
-                <a href="#resources">
-                    <span class="demoLink">Resources</span>
-                </a>
+                <a href="#resources" class="demoLink"> Resources </a>
             </li>
         </ul>
     </div>
 
-    <section class="readme-container" id="readme">
-        <h1 class="title">3D Web Development: Examples, Methods, and Experiments</h1>
+    <section class="content">
+        <section class="readme-container" id="readme">
+            <h1 class="title">3D Web Development: Examples, Methods, and Experiments</h1>
 
-        <p>This is a simple collection of 3D (mostly using WebGL frameworks) web development techniques. It's only based
-            on my personal experience and will be updated whenever I can:)<br />
-            Documentations linked here are mostly from Three.js, A-frame, and Babylon.js.</br>
-            I also listed some simple websites tried by myself here – they are just for experimenting with different
-            techniques and the code sippets still need to be improved a lot. </br>
-            Practicing with these techniques is a long-term, on-going process. 3D web development is difficult, but
-            there’re some parts that are relatively easier to do. I have only tried these easy ones :D Hopefully those
-            difficult parts become easier in the future!</p>
+            <p>This is a simple collection of 3D (mostly using WebGL frameworks) web development techniques. It's only
+                based
+                on my personal experience and will be updated whenever I can:)<br />
+                Documentations linked here are mostly from Three.js, A-frame, and Babylon.js.</br>
+                I also listed some simple websites tried by myself here – they are just for experimenting with different
+                techniques and the code sippets still need to be improved a lot. </br>
+                Practicing with these techniques is a long-term, on-going process. 3D web development is difficult, but
+                there’re some parts that are relatively easier to do. I have only tried these easy ones :D Hopefully
+                those
+                difficult parts become easier in the future!</p>
 
-        <h2>What is WebGL?</h2>
-        <p>WebGL, short for Web Graphics Library,is a JavaScript API for rendering interactive 2D and 3D graphics
-            within any compatible web browser. WebGL elements can be mixed with other HTML elements and composited with
-            other parts of the page or page background.</p>
-        <ul>
-            <li>It renders triangles at a remarkable speed.</li>
-            <li>It uses the Graphic Processing Unit (GPU).</li>
-        </ul>
-        <p class="source"><i>Source: <a href="https://en.wikipedia.org/wiki/WebGL"> Wikipedia: WebGL</a></i></p>
-
-        <h2>What are WebGL frameworks?</h2>
-        <p>WebGL Frameworks help us to create WebGL content quickly and easily without building from the ground up.
-        </p>
-        <p class="source"><i>Source: <a
-                    href="https://en.wikipedia.org/wiki/List_of_WebGL_frameworks#:~:text=Frameworks%20are%20available%20to%20create,building%20from%20the%20ground%20up.&text=An%20open%20source%20JavaScript%20library,using%20WebGL%2C%20developed%20by%20Ambiera.">
-                    Wikipedia: List of WebGL frameworks</a></i></p>
-        <div class="loadAndClear">
-            <a id="frameworks__load" class="loadButton"
-                href="https://en.wikipedia.org/wiki/List_of_WebGL_frameworks#:~:text=Frameworks%20are%20available%20to%20create,building%20from%20the%20ground%20up.&text=An%20open%20source%20JavaScript%20library,using%20WebGL%2C%20developed%20by%20Ambiera."
-                target="frameworks__iframe">Load Content</a>
-            <a id="frameworks__clear" class="clearButton" href="iframeBg.html" target="frameworks__iframe">Close
-                Content</a>
-        </div>
-        <iframe src="iframeBg.html" class="loading-iframe" name="frameworks__iframe" loading="lazy">
-        </iframe>
-
-        <h2>Three.js, A-frame and Babylon.js</h2>
-        <h3>What is Three.js?</h3>
-        <p><a href="https://threejs.org/">Three.js</a> is a cross-browser JavaScript library used to create and display
-            animated 3D computer graphics in a web browser using WebGL. <br />It was first released by <a
-                href="https://ricardocabello.com/">Ricardo
-                Cabello</a>,
-            aka <a href="https://mrdoob.com/">Mr.doob</a> to <a href="https://github.com/mrdoob/three.js/">Github</a> in
-            2010.</p>
-        <p class="source"><i>Source: <a href="https://en.wikipedia.org/wiki/Three.js"> Wikipedia: Three.js</a></i>
-        </p>
-
-        <h3>What is A-frame?</h3>
-        <p><a href="https://aframe.io/">A-Frame</a> is a web framework for building virtual reality experiences. It is
-            based on top of HTML, making it simple to get started. The core is a powerful entity-component framework
-            that provides a declarative, extensible, and composable structure to three.js. → <a
-                href="https://github.com/aframevr/aframe">Github repository</a></p>
-        <p class="source"><i>Source: <a href="https://aframe.io/docs/1.2.0/introduction/#what-is-a-frame"> A-frame:
-                    What is A-Frame?</a></i></p>
-
-        <h3>What is Babylon.js?</h3>
-        <p><a href="https://www.babylonjs.com/">Babylon.js</a> is a real time 3D engine using a JavaScript library for
-            displaying 3D graphics in a web browser via HTML5. The <a
-                href="https://github.com/BabylonJS/Babylon.js">source code</a> is available on GitHub and distributed
-            under the Apache License 2.0.</p>
-        <p class="source"><i>Source: <a href="https://en.wikipedia.org/wiki/Babylon.js"> Wikipedia:
-                    Babylon.js</a></i>
-        </p>
-    </section>
-
-    <hr>
-
-    <section class="createScene-container" id="createScene">
-        <h2>Create a scene</h2>
-        <h3> <a href="https://threejs.org/docs/#manual/en/introduction/Creating-a-scene">Create a scene with
-                Three.js</a>
-        </h3>
-        <div class="loadAndClear">
-            <button id="sceneThree__load" class="loadButton--jsfiddle" target="sceneThree__iframe">Load
-                Content</button>
-            <button id="sceneThree__clear" class="clearButton--jsfiddle">Close
-                Content</button>
-        </div>
-        <div class="jsfiddle-iframes">
-            <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
-            <div class="loading-script--jsfiddle">
-                <script class="script--jsfiddle" async src="//jsfiddle.net/fxurzeb4/embed/js,html,css,result/dark/"
-                    name="sceneThree__iframe">
-                </script>
-            </div>
-        </div>
-
-        <h3> <a href="https://aframe.io/docs/1.2.0/guides/building-a-basic-scene.html">Create a scene with
-                A-frame</a>
-        </h3>
-        <div class="loadAndClear">
-            <a id="sceneAframe__load" class="loadButton"
-                href="https://glitch.com/edit/#!/aframe?path=index.html%3A1%3A0" target="sceneAframe__iframe">Load
-                Content</a>
-            <a id="sceneAframe__clear" class="clearButton" href="iframeBg.html" target="sceneAframe__iframe">Close
-                Content</a>
-        </div>
-        <iframe src="iframeBg.html" loading="lazy" name="sceneAframe__iframe" class="loading-iframe"></iframe>
-
-        <h3> <a href="https://doc.babylonjs.com/start/chap1/first_scene">Create a scene with Babylon.js</a>
-        </h3>
-        <div class="loadAndClear">
-            <a id="sceneBabylon__load" class="loadButton" href="https://playground.babylonjs.com/#KBS9I5"
-                target="sceneBabylon__iframe">Load
-                Content</a>
-            <a id="sceneBabylon__clear" class="clearButton" href="iframeBg.html" target="sceneBabylon__iframe">Close
-                Content</a>
-        </div>
-        <iframe src="iframeBg.html" loading="lazy" name="sceneBabylon__iframe" class="loading-iframe"></iframe>
-    </section>
-
-    <hr>
-
-    <section class="loadingModels-container" id="loadingModels">
-        <h2>Loading 3D models</h2>
-        <h3 id="loadingModels-examples">Examples</h3>
-
-        <div class="loadAndClear">
-            <a id="modelExample1__load" class="loadButton"
-                href="https://threejs.org/examples/#webgl_animation_keyframes" target="modelExample1__iframe">Load
-                Content</a>
-            <a id="modelExample1__clear" class="clearButton" href="iframeBg.html" target="modelExample1__iframe">Close
-                Content</a>
-        </div>
-        <iframe src="iframeBg.html" loading="lazy" name="modelExample1__iframe" class="loading-iframe"></iframe>
-
-        <div class="loadAndClear">
-            <a id="modelExample2__load" class="loadButton" href="https://weedensenteret.no/"
-                target="modelExample2__iframe">Load
-                Content</a>
-            <a id="modelExample2__clear" class="clearButton" href="iframeBg.html" target="modelExample2__iframe">Close
-                Content</a>
-        </div>
-        <iframe src="iframeBg.html" loading="lazy" name="modelExample2__iframe" class="loading-iframe"></iframe>
-
-        <div class="loadAndClear">
-            <a id="modelExample3__load" class="loadButton" href="https://giftgiving.gucci.com/#/"
-                target="modelExample3__iframe">Load
-                Content</a>
-            <a id="modelExample3__clear" class="clearButton" href="iframeBg.html" target="modelExample3__iframe">Close
-                Content</a>
-        </div>
-        <iframe src="iframeBg.html" loading="lazy" name="modelExample3__iframe" class="loading-iframe"></iframe>
-
-        <h3 id="loadingModels-documentations">Documentations</h3>
-
-        <p> <a href="https://threejs.org/docs/#manual/en/introduction/Loading-3D-models">Loading 3D models using
-                Three.js</a> </p>
-
-        <div class="loadAndClear">
-            <a id="modelDocThree__load" class="loadButton"
-                href="https://threejs.org/docs/#manual/en/introduction/Loading-3D-models"
-                target="modelDocThree__iframe">Load
-                Content</a>
-            <a id="modelDocThree__clear" class="clearButton" href="iframeBg.html" target="modelDocThree__iframe">Close
-                Content</a>
-        </div>
-        <iframe src="iframeBg.html" loading="lazy" name="modelDocThree__iframe" class="loading-iframe"></iframe>
-
-        <p>Playing pre-built animations using <a
-                href="https://threejs.org/docs/#api/en/animation/AnimationMixer">AnimationMixer</a></p>
-
-        <div class="loadAndClear">
-            <a id="animationThree__load" class="loadButton"
-                href="https://threejs.org/docs/#api/en/animation/AnimationMixer" target="animationThree__iframe">Load
-                Content</a>
-            <a id="animationThree__clear" class="clearButton" href="iframeBg.html" target="animationThree__iframe">Close
-                Content</a>
-        </div>
-        <iframe src="iframeBg.html" loading="lazy" name="animationThree__iframe" class="loading-iframe"></iframe>
-
-        <p>This is the code of "<a href="https://threejs.org/examples/#webgl_animation_keyframes">Little Tokyo</a>" - a
-            Three.js example we saw earlier.</p>
-        <div class="loadAndClear">
-            <button id="animThreeExampleCode1__load" class="loadButton--jsfiddle"
-                target="animThreeExampleCode1__iframe">Load
-                Content</button>
-            <button id="animThreeExampleCode1__clear" class="clearButton--jsfiddle">Close
-                Content</button>
-        </div>
-        <div class="jsfiddle-iframes">
-            <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
-            <div class="gist-container loading-script--jsfiddle">
-                <script
-                    src="https://gist-it.appspot.com/github.com/mrdoob/three.js/blob/master/examples/webgl_animation_keyframes.html">
-                </script>
-            </div>
-        </div>
-
-        <p> <a href="https://threejs.org/docs/#manual/en/introduction/Loading-3D-models">Loading 3D models using
-                A-frame</a> </p>
-        <div class="loadAndClear">
-            <a id="modelDocAframe1__load" class="loadButton"
-                href="https://aframe.io/docs/1.2.0/components/gltf-model.html#sidebar"
-                target="modelDocAframe1__iframe">Load
-                Content</a>
-            <a id="modelDocAframe1__clear" class="clearButton" href="iframeBg.html"
-                target="modelDocAframe1__iframe">Close
-                Content</a>
-        </div>
-        <iframe src="iframeBg.html" loading="lazy" name="modelDocAframe1__iframe" class="loading-iframe"></iframe>
-
-        <div class="loadAndClear">
-            <a id="modelDocAframe2__load" class="loadButton"
-                href="https://glitch.com/edit/#!/aframe-modify-model-material?path=index.html%3A1%3A0"
-                target="modelDocAframe2__iframe">Load
-                Content</a>
-            <a id="modelDocAframe2__clear" class="clearButton" href="iframeBg.html"
-                target="modelDocAframe2__iframe">Close
-                Content</a>
-        </div>
-        <iframe src="iframeBg.html" loading="lazy" name="modelDocAframe2__iframe" class="loading-iframe"></iframe>
-
-        <p>Playing pre-built animations using <a
-                href="https://github.com/n5ro/aframe-extras/tree/master/src/loaders#animation">the
-                animation-mixer component</a> from <a href="https://github.com/n5ro/aframe-extras">aframe-extras</a>.
-        </p>
-
-        <div class="loadAndClear">
-            <button class="loadButton--jsfiddle">Load Content</button>
-            <button class="clearButton--jsfiddle">Close Content</button>
-        </div>
-        <div class="jsfiddle-iframes">
-            <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
-            <div class="gist-container loading-script--jsfiddle">
-                <script
-                    src="https://gist-it.appspot.com/https://github.com/junjie-w/experiments/blob/main/island/island.js">
-                </script>
-            </div>
-        </div>
-
-        <h3 id="loadingModels-experiments">Experiment: Sea & Island</h3>
-
-        <div class="loadAndClear">
-            <a id="island__load" class="loadButton" href="https://junjie-w.github.io/experiments/island.html"
-                target="island__iframe">Load
-                Content</a>
-            <a id="island__clear" class="clearButton" href="iframeBg.html" target="island__iframe">Close
-                Content</a>
-        </div>
-        <iframe src="iframeBg.html" loading="lazy" id="island__iframe" name="island__iframe"
-            class="loading-iframe"></iframe>
-        <p>We can load 3D models with pre-built animations, transform models, add audios, animations and event
-            listeners to them. </p>
-        <h4>What I did here:</h4>
-        <ul>
-            <li>Loaded three models from Sketchfab;</li>
-            <div class="models__island">
-                <div class="loadAndClear">
-                    <button id="islandModel1__load" class="loadButton--jsfiddle" target="islandModel1__iframe">Load
-                        Content</button>
-                    <button id="islandModel1__clear" class="clearButton--jsfiddle">Close
-                        Content</button>
-                </div>
-                <div class="jsfiddle-iframes">
-                    <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
-                    <div class="loading-script--jsfiddle">
-                        <div class="sketchfab-embed-wrapper"> <iframe title="Moomin Reanimated part" frameborder="0"
-                                allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
-                                allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport
-                                execution-while-not-rendered web-share
-                                src="https://sketchfab.com/models/0852ecadb0ea443b89d16c0769001a1f/embed"> </iframe>
-                            <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
-                                    href="https://sketchfab.com/3d-models/moomin-reanimated-part-0852ecadb0ea443b89d16c0769001a1f?utm_medium=embed&utm_campaign=share-popup&utm_content=0852ecadb0ea443b89d16c0769001a1f"
-                                    target="_blank" style="font-weight: bold; color: #1CAAD9;"> Moomin Reanimated part
-                                </a>
-                                by
-                                <a href="https://sketchfab.com/almondfeather?utm_medium=embed&utm_campaign=share-popup&utm_content=0852ecadb0ea443b89d16c0769001a1f"
-                                    target="_blank" style="font-weight: bold; color: #1CAAD9;"> AlmondFeather </a> on <a
-                                    href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=0852ecadb0ea443b89d16c0769001a1f"
-                                    target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="loadAndClear">
-                    <button id="islandModel2__load" class="loadButton--jsfiddle" target="islandModel2__iframe">Load
-                        Content</button>
-                    <button id="islandModel2__clear" class="clearButton--jsfiddle">Close
-                        Content</button>
-                </div>
-                <div class="jsfiddle-iframes">
-                    <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
-                    <div class="loading-script--jsfiddle">
-                        <div class="sketchfab-embed-wrapper"> <iframe title="Microwave Rigged (Free - NonCommercial)"
-                                frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
-                                allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport
-                                execution-while-not-rendered web-share
-                                src="https://sketchfab.com/models/951cea7c961541d6a27a9d1abca27ee9/embed"> </iframe>
-                            <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
-                                    href="https://sketchfab.com/3d-models/microwave-rigged-free-noncommercial-951cea7c961541d6a27a9d1abca27ee9?utm_medium=embed&utm_campaign=share-popup&utm_content=951cea7c961541d6a27a9d1abca27ee9"
-                                    target="_blank" style="font-weight: bold; color: #1CAAD9;"> Microwave Rigged (Free -
-                                    NonCommercial) </a> by <a
-                                    href="https://sketchfab.com/dennish2010?utm_medium=embed&utm_campaign=share-popup&utm_content=951cea7c961541d6a27a9d1abca27ee9"
-                                    target="_blank" style="font-weight: bold; color: #1CAAD9;"> 3DHaupt </a> on <a
-                                    href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=951cea7c961541d6a27a9d1abca27ee9"
-                                    target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="loadAndClear">
-                    <button id="islandModel3__load" class="loadButton--jsfiddle" target="islandModel3__iframe">Load
-                        Content</button>
-                    <button id="islandModel3__clear" class="clearButton--jsfiddle">Close
-                        Content</button>
-                </div>
-                <div class="jsfiddle-iframes">
-                    <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
-                    <div class="loading-script--jsfiddle">
-                        <div class="sketchfab-embed-wrapper"> <iframe title="3 seconds of vacations" frameborder="0"
-                                allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
-                                allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport
-                                execution-while-not-rendered web-share
-                                src="https://sketchfab.com/models/a5b47f042b854aa887523e49af8ee8d8/embed"> </iframe>
-                            <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
-                                    href="https://sketchfab.com/3d-models/3-seconds-of-vacations-a5b47f042b854aa887523e49af8ee8d8?utm_medium=embed&utm_campaign=share-popup&utm_content=a5b47f042b854aa887523e49af8ee8d8"
-                                    target="_blank" style="font-weight: bold; color: #1CAAD9;"> 3 seconds of vacations
-                                </a>
-                                by
-                                <a href="https://sketchfab.com/JonhGillessen?utm_medium=embed&utm_campaign=share-popup&utm_content=a5b47f042b854aa887523e49af8ee8d8"
-                                    target="_blank" style="font-weight: bold; color: #1CAAD9;"> JonhGillessen </a> on <a
-                                    href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=a5b47f042b854aa887523e49af8ee8d8"
-                                    target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <li>Control model animations using animation-mixer component;</li>
-            <li>Added sea using <a
-                    href="https://github.com/n5ro/aframe-extras/tree/master/src/primitives">aframe-extras</a>;</li>
-            <li>Added sounds with animations;</li>
-            <li>Changed the color of one mesh of the island model;</li>
-            <li>Added spheres, lights and shadows;</li>
-            <li>Added one <a href="https://threejs.org/docs/#api/en/geometries/CircleGeometry">CircleGeometry</a>,
+            <h2>What is WebGL?</h2>
+            <p>WebGL, short for Web Graphics Library,is a JavaScript API for rendering interactive 2D and 3D graphics
+                within any compatible web browser. WebGL elements can be mixed with other HTML elements and composited
                 with
-                material as an image of a clock, using Three.js;</li>
-            <div class="island__files">
-                <div class="island__file1">
-                    <div class="loadAndClear">
-                        <button class="loadButton--jsfiddle">Load Content</button>
-                        <button class="clearButton--jsfiddle">Close Content</button>
-                    </div>
-                    <div class="jsfiddle-iframes">
-                        <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
-                        <div class="gist-container loading-script--jsfiddle">
-                            <script
-                                src="https://gist-it.appspot.com/https://github.com/junjie-w/experiments/blob/main/island.html">
-                            </script>
-                        </div>
-                    </div>
-                </div>
-                <div class="island__file2">
-                    <div class="loadAndClear">
-                        <button class="loadButton--jsfiddle">Load Content</button>
-                        <button class="clearButton--jsfiddle">Close Content</button>
-                    </div>
-                    <div class="jsfiddle-iframes">
-                        <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
-                        <div class="gist-container loading-script--jsfiddle">
-                            <script
-                                src="https://gist-it.appspot.com/https://github.com/junjie-w/experiments/blob/main/island/island.js">
-                            </script>
-                        </div>
-                    </div>
+                other parts of the page or page background.</p>
+            <ul>
+                <li>It renders triangles at a remarkable speed.</li>
+                <li>It uses the Graphic Processing Unit (GPU).</li>
+            </ul>
+            <p class="source"><i>Source: <a href="https://en.wikipedia.org/wiki/WebGL"> Wikipedia: WebGL</a></i></p>
+
+            <h2>What are WebGL frameworks?</h2>
+            <p>WebGL Frameworks help us to create WebGL content quickly and easily without building from the ground up.
+            </p>
+            <p class="source"><i>Source: <a
+                        href="https://en.wikipedia.org/wiki/List_of_WebGL_frameworks#:~:text=Frameworks%20are%20available%20to%20create,building%20from%20the%20ground%20up.&text=An%20open%20source%20JavaScript%20library,using%20WebGL%2C%20developed%20by%20Ambiera.">
+                        Wikipedia: List of WebGL frameworks</a></i></p>
+            <div class="loadAndClear">
+                <a id="frameworks__load" class="loadButton"
+                    href="https://en.wikipedia.org/wiki/List_of_WebGL_frameworks#:~:text=Frameworks%20are%20available%20to%20create,building%20from%20the%20ground%20up.&text=An%20open%20source%20JavaScript%20library,using%20WebGL%2C%20developed%20by%20Ambiera."
+                    target="frameworks__iframe">Load Content</a>
+                <a id="frameworks__clear" class="clearButton" href="iframeBg.html" target="frameworks__iframe">Close
+                    Content</a>
+            </div>
+            <iframe src="iframeBg.html" class="loading-iframe" name="frameworks__iframe" loading="lazy">
+            </iframe>
+
+            <h2>Three.js, A-frame and Babylon.js</h2>
+            <h3>What is Three.js?</h3>
+            <p><a href="https://threejs.org/">Three.js</a> is a cross-browser JavaScript library used to create and
+                display
+                animated 3D computer graphics in a web browser using WebGL. <br />It was first released by <a
+                    href="https://ricardocabello.com/">Ricardo
+                    Cabello</a>,
+                aka <a href="https://mrdoob.com/">Mr.doob</a> to <a
+                    href="https://github.com/mrdoob/three.js/">Github</a> in
+                2010.</p>
+            <p class="source"><i>Source: <a href="https://en.wikipedia.org/wiki/Three.js"> Wikipedia: Three.js</a></i>
+            </p>
+
+            <h3>What is A-frame?</h3>
+            <p><a href="https://aframe.io/">A-Frame</a> is a web framework for building virtual reality experiences. It
+                is
+                based on top of HTML, making it simple to get started. The core is a powerful entity-component framework
+                that provides a declarative, extensible, and composable structure to three.js. → <a
+                    href="https://github.com/aframevr/aframe">Github repository</a></p>
+            <p class="source"><i>Source: <a href="https://aframe.io/docs/1.2.0/introduction/#what-is-a-frame"> A-frame:
+                        What is A-Frame?</a></i></p>
+
+            <h3>What is Babylon.js?</h3>
+            <p><a href="https://www.babylonjs.com/">Babylon.js</a> is a real time 3D engine using a JavaScript library
+                for
+                displaying 3D graphics in a web browser via HTML5. The <a
+                    href="https://github.com/BabylonJS/Babylon.js">source code</a> is available on GitHub and
+                distributed
+                under the Apache License 2.0.</p>
+            <p class="source"><i>Source: <a href="https://en.wikipedia.org/wiki/Babylon.js"> Wikipedia:
+                        Babylon.js</a></i>
+            </p>
+        </section>
+
+        <hr>
+
+        <section class="createScene-container" id="createScene">
+            <h2>Create a scene</h2>
+            <h3> <a href="https://threejs.org/docs/#manual/en/introduction/Creating-a-scene">Create a scene with
+                    Three.js</a>
+            </h3>
+            <div class="loadAndClear">
+                <button id="sceneThree__load" class="loadButton--jsfiddle" target="sceneThree__iframe">Load
+                    Content</button>
+                <button id="sceneThree__clear" class="clearButton--jsfiddle">Close
+                    Content</button>
+            </div>
+            <div class="jsfiddle-iframes">
+                <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
+                <div class="loading-script--jsfiddle">
+                    <script class="script--jsfiddle" async src="//jsfiddle.net/fxurzeb4/embed/js,html,css,result/dark/"
+                        name="sceneThree__iframe">
+                    </script>
                 </div>
             </div>
-        </ul>
-        <h4>Side notes</h4>
-        <ul>
-            <li>Loading 3D models could be slow → probably need to design a loading screen</li>
-            <li>Audio will change volume when it’s getting closer/further to/from the user. This depends on which
-                mesh/model it is attached to, and what movements that mesh/model has.</li>
-            <li> Volume control button gives users options to have sounds on or off. </li>
-            <li> Some common patterns from example websites: rotations, particles,
-                models/meshes/particles change position along with mouse movement, etc. ...cool or cliche? it should
-                make
-                sense;)</li>
-        </ul>
-    </section>
 
-    <hr>
+            <h3> <a href="https://aframe.io/docs/1.2.0/guides/building-a-basic-scene.html">Create a scene with
+                    A-frame</a>
+            </h3>
+            <div class="loadAndClear">
+                <a id="sceneAframe__load" class="loadButton"
+                    href="https://glitch.com/edit/#!/aframe?path=index.html%3A1%3A0" target="sceneAframe__iframe">Load
+                    Content</a>
+                <a id="sceneAframe__clear" class="clearButton" href="iframeBg.html" target="sceneAframe__iframe">Close
+                    Content</a>
+            </div>
+            <iframe src="iframeBg.html" loading="lazy" name="sceneAframe__iframe" class="loading-iframe"></iframe>
 
-    <section class="lightShadow-container" id="lightShadow">
-        <h2>Light and Shadow</h2>
-        <h3 id="lightShadow-examples">Examples</h3>
-        <div class="loadAndClear">
-            <a id="lightShadowThree__load" class="loadButton"
-                href="https://threejs.org/examples/#webgl_animation_skinning_blending"
-                target="lightShadowThree__iframe">Load
-                Content</a>
-            <a id="lightShadowThree__clear" class="clearButton" href="iframeBg.html"
-                target="lightShadowThree__iframe">Close
-                Content</a>
-        </div>
-        <iframe src="iframeBg.html" class="loading-iframe" name="lightShadowThree__iframe" loading="lazy">
-        </iframe>
+            <h3> <a href="https://doc.babylonjs.com/start/chap1/first_scene">Create a scene with Babylon.js</a>
+            </h3>
+            <div class="loadAndClear">
+                <a id="sceneBabylon__load" class="loadButton" href="https://playground.babylonjs.com/#KBS9I5"
+                    target="sceneBabylon__iframe">Load
+                    Content</a>
+                <a id="sceneBabylon__clear" class="clearButton" href="iframeBg.html" target="sceneBabylon__iframe">Close
+                    Content</a>
+            </div>
+            <iframe src="iframeBg.html" loading="lazy" name="sceneBabylon__iframe" class="loading-iframe"></iframe>
+        </section>
 
-        <h3 id="lightShadow-documentations">Documentations</h3>
+        <hr>
 
-        <p> <a href="https://threejs.org/docs/?q=light#api/en/lights/AmbientLight">Lights</a> and <a
-                href="https://threejs.org/docs/index.html?q=shadow#api/en/lights/shadows/LightShadow">shadows</a> in
-            Three.js</p>
+        <section class="loadingModels-container" id="loadingModels">
+            <h2>Loading 3D models</h2>
+            <h3 id="loadingModels-examples">Examples</h3>
 
-        <div class="loadAndClear">
-            <a id="lightShadowThreeDoc1__load" class="loadButton"
-                href="https://threejs.org/docs/?q=light#api/en/lights/AmbientLight"
-                target="lightShadowThreeDoc1__iframe">Load Content</a>
-            <a id="lightShadowThreeDoc1__clear" class="clearButton" href="iframeBg.html"
-                target="lightShadowThreeDoc1__iframe">Close Content</a>
-        </div>
-        <iframe src="iframeBg.html" class="loading-iframe" name="lightShadowThreeDoc1__iframe" loading="lazy"></iframe>
+            <div class="loadAndClear">
+                <a id="modelExample1__load" class="loadButton"
+                    href="https://threejs.org/examples/#webgl_animation_keyframes" target="modelExample1__iframe">Load
+                    Content</a>
+                <a id="modelExample1__clear" class="clearButton" href="iframeBg.html"
+                    target="modelExample1__iframe">Close
+                    Content</a>
+            </div>
+            <iframe src="iframeBg.html" loading="lazy" name="modelExample1__iframe" class="loading-iframe"></iframe>
 
-        <div class="loadAndClear">
-            <a id="lightShadowThreeDoc2__load" class="loadButton"
-                href="https://threejs.org/docs/index.html?q=shadow#api/en/lights/shadows/LightShadow"
-                target="lightShadowThreeDoc2__iframe">Load Content</a>
-            <a id="lightShadowThreeDoc2__clear" class="clearButton" href="iframeBg.html"
-                target="lightShadowThreeDoc2__iframe">Close Content</a>
-        </div>
-        <iframe src="iframeBg.html" class="loading-iframe" name="lightShadowThreeDoc2__iframe" loading="lazy"></iframe>
+            <div class="loadAndClear">
+                <a id="modelExample2__load" class="loadButton" href="https://weedensenteret.no/"
+                    target="modelExample2__iframe">Load
+                    Content</a>
+                <a id="modelExample2__clear" class="clearButton" href="iframeBg.html"
+                    target="modelExample2__iframe">Close
+                    Content</a>
+            </div>
+            <iframe src="iframeBg.html" loading="lazy" name="modelExample2__iframe" class="loading-iframe"></iframe>
 
-        <p> <a href="https://aframe.io/docs/1.2.0/components/light.html#sidebar">Lights</a> and <a
-                href="https://aframe.io/docs/1.2.0/components/shadow.html#sidebar">shadows</a> in A-frame</p>
+            <div class="loadAndClear">
+                <a id="modelExample3__load" class="loadButton" href="https://giftgiving.gucci.com/#/"
+                    target="modelExample3__iframe">Load
+                    Content</a>
+                <a id="modelExample3__clear" class="clearButton" href="iframeBg.html"
+                    target="modelExample3__iframe">Close
+                    Content</a>
+            </div>
+            <iframe src="iframeBg.html" loading="lazy" name="modelExample3__iframe" class="loading-iframe"></iframe>
 
-        <div class="loadAndClear">
-            <a id="lightShadowAframeDoc1__load" class="loadButton"
-                href="https://aframe.io/docs/1.2.0/components/light.html#sidebar"
-                target="lightShadowAframeDoc1__iframe">Load Content</a>
-            <a id="lightShadowAframeDoc1__clear" class="clearButton" href="iframeBg.html"
-                target="lightShadowAframeDoc1__iframe">Close Content</a>
-        </div>
-        <iframe src="iframeBg.html" class="loading-iframe" name="lightShadowAframeDoc1__iframe" loading="lazy"></iframe>
+            <h3 id="loadingModels-documentations">Documentations</h3>
 
-        <div class="loadAndClear">
-            <a id="lightShadowAframeDoc2__load" class="loadButton"
-                href="https://aframe.io/docs/1.2.0/components/shadow.html#sidebar"
-                target="lightShadowAframeDoc2__iframe">Load Content</a>
-            <a id="lightShadowAframeDoc2__clear" class="clearButton" href="iframeBg.html"
-                target="lightShadowAframeDoc2__iframe">Close Content</a>
-        </div>
-        <iframe src="iframeBg.html" class="loading-iframe" name="lightShadowAframeDoc2__iframe" loading="lazy"></iframe>
+            <p> <a href="https://threejs.org/docs/#manual/en/introduction/Loading-3D-models">Loading 3D models using
+                    Three.js</a> </p>
 
-        <p> <a href="https://doc.babylonjs.com/divingDeeper/lights/lights_introduction">Lights</a> and <a
-                href="https://doc.babylonjs.com/divingDeeper/lights/shadows">shadows</a> in
-            Babylon.js</p>
+            <div class="loadAndClear">
+                <a id="modelDocThree__load" class="loadButton"
+                    href="https://threejs.org/docs/#manual/en/introduction/Loading-3D-models"
+                    target="modelDocThree__iframe">Load
+                    Content</a>
+                <a id="modelDocThree__clear" class="clearButton" href="iframeBg.html"
+                    target="modelDocThree__iframe">Close
+                    Content</a>
+            </div>
+            <iframe src="iframeBg.html" loading="lazy" name="modelDocThree__iframe" class="loading-iframe"></iframe>
 
-        <div class="loadAndClear">
-            <a id="lightShadowBabylonDoc1__load" class="loadButton"
-                href="https://doc.babylonjs.com/divingDeeper/lights/lights_introduction"
-                target="lightShadowBabylonDoc1__iframe">Load Content</a>
-            <a id="lightShadowBabylonDoc1__clear" class="clearButton" href="iframeBg.html"
-                target="lightShadowBabylonDoc1__iframe">Close Content</a>
-        </div>
-        <iframe src="iframeBg.html" class="loading-iframe" name="lightShadowBabylonDoc1__iframe"
-            loading="lazy"></iframe>
+            <p>Playing pre-built animations using <a
+                    href="https://threejs.org/docs/#api/en/animation/AnimationMixer">AnimationMixer</a></p>
 
-        <div class="loadAndClear">
-            <a id="lightShadowBabylonDoc2__load" class="loadButton"
-                href="https://doc.babylonjs.com/divingDeeper/lights/shadows"
-                target="lightShadowBabylonDoc2__iframe">Load Content</a>
-            <a id="lightShadowBabylonDoc2__clear" class="clearButton" href="iframeBg.html"
-                target="lightShadowBabylonDoc2__iframe">Close Content</a>
-        </div>
-        <iframe src="iframeBg.html" class="loading-iframe" name="lightShadowBabylonDoc2__iframe"
-            loading="lazy"></iframe>
+            <div class="loadAndClear">
+                <a id="animationThree__load" class="loadButton"
+                    href="https://threejs.org/docs/#api/en/animation/AnimationMixer"
+                    target="animationThree__iframe">Load
+                    Content</a>
+                <a id="animationThree__clear" class="clearButton" href="iframeBg.html"
+                    target="animationThree__iframe">Close
+                    Content</a>
+            </div>
+            <iframe src="iframeBg.html" loading="lazy" name="animationThree__iframe" class="loading-iframe"></iframe>
 
-        <h3 id="lightShadow-experiments">Experiment: Light & Shadow</h3>
-
-        <div class="loadAndClear">
-            <a id="shadow__load" class="loadButton" href="https://junjie-w.github.io/experiments/shadow.html"
-                target="shadow__iframe">Load Content</a>
-            <a id="shadow__clear" class="clearButton" href="iframeBg.html" target="shadow__iframe">Close
-                Content</a>
-        </div>
-        <iframe src="iframeBg.html" loading="lazy" id="island__iframe" name="shadow__iframe"
-            class="loading-iframe"></iframe>
-
-        <p>We can add lights to objects, and control which surfaces should receive shadows and which objects should cast
-            shadows.</p>
-
-        <h4>What I did here:</h4>
-        <ul>
-            <li>Loaded three models from Sketchfab;</li>
-            <div class="models__shadow">
-                <div class="loadAndClear">
-                    <button id="shadowModel1__load" class="loadButton--jsfiddle">Load Content</button>
-                    <button id="shadowModel1__clear" class="clearButton--jsfiddle">Close Content</button>
-                </div>
-                <div class="jsfiddle-iframes">
-                    <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
-                    <div class="loading-script--jsfiddle">
-                        <div class="sketchfab-embed-wrapper"> <iframe title="Traffic Light" frameborder="0"
-                                allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
-                                allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport
-                                execution-while-not-rendered web-share
-                                src="https://sketchfab.com/models/e512a5adb1904a71a1bd53c4a21b48d4/embed"> </iframe>
-                            <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
-                                    href="https://sketchfab.com/3d-models/traffic-light-e512a5adb1904a71a1bd53c4a21b48d4?utm_medium=embed&utm_campaign=share-popup&utm_content=e512a5adb1904a71a1bd53c4a21b48d4"
-                                    target="_blank" style="font-weight: bold; color: #1CAAD9;"> Traffic Light </a> by <a
-                                    href="https://sketchfab.com/gadsby?utm_medium=embed&utm_campaign=share-popup&utm_content=e512a5adb1904a71a1bd53c4a21b48d4"
-                                    target="_blank" style="font-weight: bold; color: #1CAAD9;"> gadsby </a> on <a
-                                    href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=e512a5adb1904a71a1bd53c4a21b48d4"
-                                    target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="loadAndClear">
-                    <button id="shadowModel2__load" class="loadButton--jsfiddle">Load Content</button>
-                    <button id="shadowModel2__clear" class="clearButton--jsfiddle">Close Content</button>
-                </div>
-                <div class="jsfiddle-iframes">
-                    <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
-                    <div class="loading-script--jsfiddle">
-                        <div class="sketchfab-embed-wrapper"> <iframe title="Suburban Street Lamp" frameborder="0"
-                                allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
-                                allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport
-                                execution-while-not-rendered web-share
-                                src="https://sketchfab.com/models/fdc8b5ba548243448f9b918ea7892786/embed"> </iframe>
-                            <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
-                                    href="https://sketchfab.com/3d-models/suburban-street-lamp-fdc8b5ba548243448f9b918ea7892786?utm_medium=embed&utm_campaign=share-popup&utm_content=fdc8b5ba548243448f9b918ea7892786"
-                                    target="_blank" style="font-weight: bold; color: #1CAAD9;"> Suburban Street Lamp
-                                </a> by
-                                <a href="https://sketchfab.com/gadsby?utm_medium=embed&utm_campaign=share-popup&utm_content=fdc8b5ba548243448f9b918ea7892786"
-                                    target="_blank" style="font-weight: bold; color: #1CAAD9;"> gadsby </a> on <a
-                                    href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=fdc8b5ba548243448f9b918ea7892786"
-                                    target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="loadAndClear">
-                    <button id="shadowModel3__load" class="loadButton--jsfiddle">Load Content</button>
-                    <button id="shadowModel3__clear" class="clearButton--jsfiddle">Close Content</button>
-                </div>
-                <div class="jsfiddle-iframes">
-                    <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
-                    <div class="loading-script--jsfiddle">
-                        <div class="sketchfab-embed-wrapper"> <iframe title="Snowman" frameborder="0" allowfullscreen
-                                mozallowfullscreen="true" webkitallowfullscreen="true" allow="fullscreen; autoplay; vr"
-                                xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
-                                web-share src="https://sketchfab.com/models/95b6485c508c4b068d683dda16a33252/embed">
-                            </iframe>
-                            <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
-                                    href="https://sketchfab.com/3d-models/snowman-95b6485c508c4b068d683dda16a33252?utm_medium=embed&utm_campaign=share-popup&utm_content=95b6485c508c4b068d683dda16a33252"
-                                    target="_blank" style="font-weight: bold; color: #1CAAD9;"> Snowman </a> by <a
-                                    href="https://sketchfab.com/PatelDev?utm_medium=embed&utm_campaign=share-popup&utm_content=95b6485c508c4b068d683dda16a33252"
-                                    target="_blank" style="font-weight: bold; color: #1CAAD9;"> PatelDev </a> on <a
-                                    href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=95b6485c508c4b068d683dda16a33252"
-                                    target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p>
-                        </div>
-                    </div>
+            <p>This is the code of "<a href="https://threejs.org/examples/#webgl_animation_keyframes">Little Tokyo</a>"
+                - a
+                Three.js example we saw earlier.</p>
+            <div class="loadAndClear">
+                <button id="animThreeExampleCode1__load" class="loadButton--jsfiddle"
+                    target="animThreeExampleCode1__iframe">Load
+                    Content</button>
+                <button id="animThreeExampleCode1__clear" class="clearButton--jsfiddle">Close
+                    Content</button>
+            </div>
+            <div class="jsfiddle-iframes">
+                <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
+                <div class="gist-container loading-script--jsfiddle">
+                    <script
+                        src="https://gist-it.appspot.com/github.com/mrdoob/three.js/blob/master/examples/webgl_animation_keyframes.html">
+                    </script>
                 </div>
             </div>
-            <li>Added particles to the scene using <a
-                    href="https://www.npmjs.com/package/aframe-particle-system-component">aframe-particle-system-component;</a>
-            </li>
-            <li>Added one pointLight and one spotLight for each light source of the street lamp and traffic lights;
-            </li>
-            <li>Added animations to the lights;</li>
-            <li>Added animations to the snowman;</li>
-            <li>Added a bit of physics effects using <a
-                    href="https://github.com/n5ro/aframe-physics-system">aframe-physics-system</a>.</li>
 
-            <div class="island__files">
-                <div class="island__file1">
-                    <div class="loadAndClear">
-                        <button class="loadButton--jsfiddle">Load Content</button>
-                        <button class="clearButton--jsfiddle">Close Content</button>
-                    </div>
-                    <div class="jsfiddle-iframes">
-                        <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
-                        <div class="gist-container loading-script--jsfiddle">
-                            <script
-                                src="https://gist-it.appspot.com/https://github.com/junjie-w/experiments/blob/main/shadow.html">
-                            </script>
-                        </div>
-                    </div>
-                </div>
-                <div class="island__file2">
-                    <div class="loadAndClear">
-                        <button class="loadButton--jsfiddle">Load Content</button>
-                        <button class="clearButton--jsfiddle">Close Content</button>
-                    </div>
-                    <div class="jsfiddle-iframes">
-                        <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
-                        <div class="gist-container loading-script--jsfiddle">
-                            <script
-                                src="https://gist-it.appspot.com/https://github.com/junjie-w/experiments/blob/main/shadow/shadow.js">
-                            </script>
-                        </div>
-                    </div>
+            <p> <a href="https://threejs.org/docs/#manual/en/introduction/Loading-3D-models">Loading 3D models using
+                    A-frame</a> </p>
+            <div class="loadAndClear">
+                <a id="modelDocAframe1__load" class="loadButton"
+                    href="https://aframe.io/docs/1.2.0/components/gltf-model.html#sidebar"
+                    target="modelDocAframe1__iframe">Load
+                    Content</a>
+                <a id="modelDocAframe1__clear" class="clearButton" href="iframeBg.html"
+                    target="modelDocAframe1__iframe">Close
+                    Content</a>
+            </div>
+            <iframe src="iframeBg.html" loading="lazy" name="modelDocAframe1__iframe" class="loading-iframe"></iframe>
+
+            <div class="loadAndClear">
+                <a id="modelDocAframe2__load" class="loadButton"
+                    href="https://glitch.com/edit/#!/aframe-modify-model-material?path=index.html%3A1%3A0"
+                    target="modelDocAframe2__iframe">Load
+                    Content</a>
+                <a id="modelDocAframe2__clear" class="clearButton" href="iframeBg.html"
+                    target="modelDocAframe2__iframe">Close
+                    Content</a>
+            </div>
+            <iframe src="iframeBg.html" loading="lazy" name="modelDocAframe2__iframe" class="loading-iframe"></iframe>
+
+            <p>Playing pre-built animations using <a
+                    href="https://github.com/n5ro/aframe-extras/tree/master/src/loaders#animation">the
+                    animation-mixer component</a> from <a
+                    href="https://github.com/n5ro/aframe-extras">aframe-extras</a>.
+            </p>
+
+            <div class="loadAndClear">
+                <button class="loadButton--jsfiddle">Load Content</button>
+                <button class="clearButton--jsfiddle">Close Content</button>
+            </div>
+            <div class="jsfiddle-iframes">
+                <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
+                <div class="gist-container loading-script--jsfiddle">
+                    <script
+                        src="https://gist-it.appspot.com/https://github.com/junjie-w/experiments/blob/main/island/island.js">
+                    </script>
                 </div>
             </div>
-        </ul>
-    </section>
 
-    <hr>
+            <h3 id="loadingModels-experiments">Experiment: Sea & Island</h3>
 
-    <section class="particles-container" id="particles">
-        <h2>Particles</h2>
-        <h3 id="particles-examples">Examples</h3>
-
-        <div class="loadAndClear">
-            <a id="particlesExample1__load" class="loadButton"
-                href="https://threejs.org/examples/webgl_points_sprites.html" target="particlesExample1__iframe">Load
-                Content</a>
-            <a id="particlesExample1__clear" class="clearButton" href="iframeBg.html"
-                target="particlesExample1__iframe">Close Content</a>
-        </div>
-        <iframe src="iframeBg.html" class="loading-iframe" name="particlesExample1__iframe" loading="lazy"></iframe>
-        <div class="loadAndClear">
-            <a id="particlesExample2__load" class="loadButton"
-                href="https://tympanus.net/Tutorials/InteractiveParticles/" target="particlesExample2__iframe">Load
-                Content</a>
-            <a id="particlesExample2__clear" class="clearButton" href="iframeBg.html"
-                target="particlesExample2__iframe">Close Content</a>
-        </div>
-        <iframe src="iframeBg.html" class="loading-iframe" name="particlesExample2__iframe" loading="lazy"></iframe>
-        <p>More examples: <a href="https://pendereckisgarden.pl/en/the-maestros-manor">Penderecki's Garden</a> and <a
-                href="https://le-voyage-azarien.art/">Le Voyage Azarien</a> (please open the link in a new tab)</p>
-
-        <h3 id="particles-documentations">Online Tutorials and Documentations</h3>
-        <p> <a href="https://aerotwist.com/tutorials/creating-particles-with-three-js/">Creating particles with
-                Three.js </a></p>
-
-        <div class="loadAndClear">
-            <a id="particlesTutorial__load" class="loadButton"
-                href="https://aerotwist.com/tutorials/creating-particles-with-three-js/"
-                target="particlesTutorial__iframe">Load
-                Content</a>
-            <a id="particlesTutorial__clear" class="clearButton" href="iframeBg.html"
-                target="particlesTutorial__iframe">Close Content</a>
-        </div>
-        <iframe src="iframeBg.html" class="loading-iframe" name="particlesTutorial__iframe" loading="lazy"></iframe>
-
-        <p> <a href="https://doc.babylonjs.com/divingDeeper/particles/particle_system/particle_system_intro">Particle
-                systems</a> in Babylon.js</p>
-        <div class="loadAndClear">
-            <a id="particlesDoc__load" class="loadButton"
-                href="https://doc.babylonjs.com/divingDeeper/particles/particle_system/particle_system_intro"
-                target="particlesDoc__iframe">Load
-                Content</a>
-            <a id="particlesDoc__clear" class="clearButton" href="iframeBg.html" target="particlesDoc__iframe">Close
-                Content</a>
-        </div>
-        <iframe src="iframeBg.html" class="loading-iframe" name="particlesDoc__iframe" loading="lazy"></iframe>
-
-        <h4>Frameworks for particles</h4>
-        <p><a href="https://www.particles3d.com/">Particles 3d</a> </p>
-        <div class="loadAndClear">
-            <a id="particlesLib__load" class="loadButton" href="https://www.particles3d.com/"
-                target="particlesLib__iframe">Load
-                Content</a>
-            <a id="particlesLib__clear" class="clearButton" href="iframeBg.html" target="particlesLib__iframe">Close
-                Content</a>
-        </div>
-        <iframe src="iframeBg.html" class="loading-iframe" name="particlesLib__iframe" loading="lazy"></iframe>
-
-        <p>Other frameworks include <a
-                href="https://www.npmjs.com/package/aframe-particle-system-component">Aframe-particle-system-component</a>
-            for A-frame and <a href="https://www.vantajs.com/">Vanta.js</a> (please open the link in a new tab).</p>
-
-        <h3 id="particles-experiments">Experiment: Particles</h3>
-        <p class="source"><i>YouTube Tutorial Link: <a
-                    href="https://www.youtube.com/watch?v=dLYMzNmILQA&t=1435s">Working
-                    with Three.js Particle Systems</a> (I have changed some code in my version)</i></p>
-        <div class="loadAndClear">
-            <a id="particles__load" class="loadButton" href="https://junjie-w.github.io/experiments/particles.html"
-                target="particles__iframe">Load Content</a>
-            <a id="particles__clear" class="clearButton" href="iframeBg.html" target="particles__iframe">Close
-                Content</a>
-        </div>
-        <iframe src="iframeBg.html" loading="lazy" name="particles__iframe" class="loading-iframe"></iframe>
-        <h4>What I did here:</h4>
-        <ul>
-            <li>Created a mesh with TorusGeometry and set its material using PointMaterial;</li>
-            <li>For particles: created 5000 particles with random x, y, and z positions using float32array and
-                Math.random();</li>
-            <li>Created a simple cross svg in Figma and set it to the image of each particle;</li>
-            <li>Add animations using requestAnimationFrame to the mesh and particles.</li>
-            <li>Get the x and y position of the mouse and add animation with mouse movements to the mesh and
-                particles.
-            </li>
-            <div class="island__files">
-                <div class="island__file1">
-                    <div class="loadAndClear">
-                        <button class="loadButton--jsfiddle">Load Content</button>
-                        <button class="clearButton--jsfiddle">Close Content</button>
-                    </div>
-                    <div class="jsfiddle-iframes">
-                        <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
-                        <div class="gist-container loading-script--jsfiddle">
-                            <script
-                                src="https://gist-it.appspot.com/https://github.com/junjie-w/experiments/blob/main/particles.html">
-                            </script>
-                        </div>
-                    </div>
-                </div>
-                <div class="island__file2">
-                    <div class="loadAndClear">
-                        <button class="loadButton--jsfiddle">Load Content</button>
-                        <button class="clearButton--jsfiddle">Close Content</button>
-                    </div>
-                    <div class="jsfiddle-iframes">
-                        <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
-                        <div class="gist-container loading-script--jsfiddle">
-                            <script
-                                src="https://gist-it.appspot.com/https://github.com/junjie-w/experiments/blob/main/particles/particles.js">
-                            </script>
-                        </div>
-                    </div>
-                </div>
+            <div class="loadAndClear">
+                <a id="island__load" class="loadButton" href="https://junjie-w.github.io/experiments/island.html"
+                    target="island__iframe">Load
+                    Content</a>
+                <a id="island__clear" class="clearButton" href="iframeBg.html" target="island__iframe">Close
+                    Content</a>
             </div>
-        </ul>
-    </section>
-
-    <hr>
-
-    <section class="clothSimulation-container" id="clothSimulation">
-        <h2>Cloth simulation</h2>
-        <h3 id="clothSimulation-examples">Examples</h3>
-        <div class="loadAndClear">
-            <a id="clothExample1__load" class="loadButton" href="https://threejs.org/examples/#webgl_animation_cloth"
-                target="clothExample1__iframe">Load
-                Content</a>
-            <a id="clothExample1__clear" class="clearButton" href="iframeBg.html" target="clothExample1__iframe">Close
-                Content</a>
-        </div>
-        <iframe src="iframeBg.html" class="loading-iframe" name="clothExample1__iframe" loading="lazy"></iframe>
-        <div class="loadAndClear">
-            <a id="clothExample2__load" class="loadButton" href="https://lusion.co/" target="clothExample2__iframe">Load
-                Content</a>
-            <a id="clothExample2__clear" class="clearButton" href="iframeBg.html" target="clothExample2__iframe">Close
-                Content</a>
-        </div>
-        <iframe src="iframeBg.html" class="loading-iframe" name="clothExample2__iframe" loading="lazy"></iframe>
-        <div class="loadAndClear">
-            <a id="clothExample3__load" class="loadButton" href="https://prior.co.jp/discover/en"
-                target="clothExample3__iframe">Load
-                Content</a>
-            <a id="clothExample3__clear" class="clearButton" href="iframeBg.html" target="clothExample3__iframe">Close
-                Content</a>
-        </div>
-        <iframe src="iframeBg.html" class="loading-iframe" name="clothExample3__iframe" loading="lazy"></iframe>
-
-        <h3 id="clothSimulation-tutorials">Online Tutorials</h3>
-        <div class="loadAndClear">
-            <a id="clothTutorial__load" class="loadButton"
-                href="https://blog.raananweber.com/2016/04/03/cloth-physics-simulation-for-babylon-js/"
-                target="clothTutorial__iframe">Load Content</a>
-            <a id="clothTutorial__clear" class="clearButton" href="iframeBg.html" target="clothTutorial__iframe">Close
-                Content</a>
-        </div>
-        <iframe src="iframeBg.html" class="loading-iframe" name="clothTutorial__iframe" loading="lazy"></iframe>
-
-        <h3 id="clothSimulation-experiments">Experiment: Cloth Simulation</h3>
-        <div class="loadAndClear">
-            <a id="cloth__load" class="loadButton" href="https://junjie-w.github.io/experiments/island.html"
-                target="cloth__iframe">Load
-                Content</a>
-            <a id="cloth__clear" class="clearButton" href="iframeBg.html" target="cloth__iframe">Close
-                Content</a>
-        </div>
-        <iframe src="iframeBg.html" loading="lazy" id="cloth__iframe" name="cloth__iframe"
-            class="loading-iframe"></iframe>
-        <p>I tried to use a bit of cloth simulation here. If you click on the lights and wait for a while, a soft clock
-            will
-            appear like a piece of cloth floating in the air. However, it’s far from what I expected. I am trying to
-            make it a
-            real-time clock tho... And trying to add more interactions.
-        </p>
-        <h4>What I did here:</h4>
-        <ul>
-            <li>Created a mesh with CircleGeometry and set its material as an image of a clock;</li>
-            <li>When the clock doesn't hit position.y as 1, its position will keep going down;</li>
-            <li>Its vertices will change position x, y, and z like waves along with the time changing, this is
-                achieved
-                by using Map function and Math.sin().</li>
-
-            <div class="island__files">
-                <div class="island__file1">
+            <iframe src="iframeBg.html" loading="lazy" id="island__iframe" name="island__iframe"
+                class="loading-iframe"></iframe>
+            <p>We can load 3D models with pre-built animations, transform models, add audios, animations and event
+                listeners to them. </p>
+            <h4>What I did here:</h4>
+            <ul>
+                <li>Loaded three models from Sketchfab;</li>
+                <div class="models__island">
                     <div class="loadAndClear">
-                        <button class="loadButton--jsfiddle">Load Content</button>
-                        <button class="clearButton--jsfiddle">Close Content</button>
+                        <button id="islandModel1__load" class="loadButton--jsfiddle" target="islandModel1__iframe">Load
+                            Content</button>
+                        <button id="islandModel1__clear" class="clearButton--jsfiddle">Close
+                            Content</button>
                     </div>
                     <div class="jsfiddle-iframes">
                         <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
-                        <div class="gist-container loading-script--jsfiddle">
-                            <script
-                                src="https://gist-it.appspot.com/https://github.com/junjie-w/experiments/blob/main/island.html">
-                            </script>
+                        <div class="loading-script--jsfiddle">
+                            <div class="sketchfab-embed-wrapper"> <iframe title="Moomin Reanimated part" frameborder="0"
+                                    allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+                                    allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport
+                                    execution-while-not-rendered web-share
+                                    src="https://sketchfab.com/models/0852ecadb0ea443b89d16c0769001a1f/embed"> </iframe>
+                                <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
+                                        href="https://sketchfab.com/3d-models/moomin-reanimated-part-0852ecadb0ea443b89d16c0769001a1f?utm_medium=embed&utm_campaign=share-popup&utm_content=0852ecadb0ea443b89d16c0769001a1f"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;"> Moomin Reanimated
+                                        part
+                                    </a>
+                                    by
+                                    <a href="https://sketchfab.com/almondfeather?utm_medium=embed&utm_campaign=share-popup&utm_content=0852ecadb0ea443b89d16c0769001a1f"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;"> AlmondFeather </a>
+                                    on <a
+                                        href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=0852ecadb0ea443b89d16c0769001a1f"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="island__file2">
+
                     <div class="loadAndClear">
-                        <button class="loadButton--jsfiddle">Load Content</button>
-                        <button class="clearButton--jsfiddle">Close Content</button>
+                        <button id="islandModel2__load" class="loadButton--jsfiddle" target="islandModel2__iframe">Load
+                            Content</button>
+                        <button id="islandModel2__clear" class="clearButton--jsfiddle">Close
+                            Content</button>
                     </div>
                     <div class="jsfiddle-iframes">
                         <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
-                        <div class="gist-container loading-script--jsfiddle">
-                            <script
-                                src="https://gist-it.appspot.com/https://github.com/junjie-w/experiments/blob/main/island/island.js">
-                            </script>
+                        <div class="loading-script--jsfiddle">
+                            <div class="sketchfab-embed-wrapper"> <iframe
+                                    title="Microwave Rigged (Free - NonCommercial)" frameborder="0" allowfullscreen
+                                    mozallowfullscreen="true" webkitallowfullscreen="true"
+                                    allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport
+                                    execution-while-not-rendered web-share
+                                    src="https://sketchfab.com/models/951cea7c961541d6a27a9d1abca27ee9/embed"> </iframe>
+                                <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
+                                        href="https://sketchfab.com/3d-models/microwave-rigged-free-noncommercial-951cea7c961541d6a27a9d1abca27ee9?utm_medium=embed&utm_campaign=share-popup&utm_content=951cea7c961541d6a27a9d1abca27ee9"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;"> Microwave Rigged
+                                        (Free -
+                                        NonCommercial) </a> by <a
+                                        href="https://sketchfab.com/dennish2010?utm_medium=embed&utm_campaign=share-popup&utm_content=951cea7c961541d6a27a9d1abca27ee9"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;"> 3DHaupt </a> on <a
+                                        href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=951cea7c961541d6a27a9d1abca27ee9"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="loadAndClear">
+                        <button id="islandModel3__load" class="loadButton--jsfiddle" target="islandModel3__iframe">Load
+                            Content</button>
+                        <button id="islandModel3__clear" class="clearButton--jsfiddle">Close
+                            Content</button>
+                    </div>
+                    <div class="jsfiddle-iframes">
+                        <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
+                        <div class="loading-script--jsfiddle">
+                            <div class="sketchfab-embed-wrapper"> <iframe title="3 seconds of vacations" frameborder="0"
+                                    allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+                                    allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport
+                                    execution-while-not-rendered web-share
+                                    src="https://sketchfab.com/models/a5b47f042b854aa887523e49af8ee8d8/embed"> </iframe>
+                                <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
+                                        href="https://sketchfab.com/3d-models/3-seconds-of-vacations-a5b47f042b854aa887523e49af8ee8d8?utm_medium=embed&utm_campaign=share-popup&utm_content=a5b47f042b854aa887523e49af8ee8d8"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;"> 3 seconds of
+                                        vacations
+                                    </a>
+                                    by
+                                    <a href="https://sketchfab.com/JonhGillessen?utm_medium=embed&utm_campaign=share-popup&utm_content=a5b47f042b854aa887523e49af8ee8d8"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;"> JonhGillessen </a>
+                                    on <a
+                                        href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=a5b47f042b854aa887523e49af8ee8d8"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <li>Control model animations using animation-mixer component;</li>
+                <li>Added sea using <a
+                        href="https://github.com/n5ro/aframe-extras/tree/master/src/primitives">aframe-extras</a>;</li>
+                <li>Added sounds with animations;</li>
+                <li>Changed the color of one mesh of the island model;</li>
+                <li>Added spheres, lights and shadows;</li>
+                <li>Added one <a href="https://threejs.org/docs/#api/en/geometries/CircleGeometry">CircleGeometry</a>,
+                    with
+                    material as an image of a clock, using Three.js;</li>
+                <div class="island__files">
+                    <div class="island__file1">
+                        <div class="loadAndClear">
+                            <button class="loadButton--jsfiddle">Load Content</button>
+                            <button class="clearButton--jsfiddle">Close Content</button>
+                        </div>
+                        <div class="jsfiddle-iframes">
+                            <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
+                            <div class="gist-container loading-script--jsfiddle">
+                                <script
+                                    src="https://gist-it.appspot.com/https://github.com/junjie-w/experiments/blob/main/island.html">
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="island__file2">
+                        <div class="loadAndClear">
+                            <button class="loadButton--jsfiddle">Load Content</button>
+                            <button class="clearButton--jsfiddle">Close Content</button>
+                        </div>
+                        <div class="jsfiddle-iframes">
+                            <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
+                            <div class="gist-container loading-script--jsfiddle">
+                                <script
+                                    src="https://gist-it.appspot.com/https://github.com/junjie-w/experiments/blob/main/island/island.js">
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+            <h4>Side notes</h4>
+            <ul>
+                <li>Loading 3D models could be slow → probably need to design a loading screen</li>
+                <li>Audio will change volume when it’s getting closer/further to/from the user. This depends on which
+                    mesh/model it is attached to, and what movements that mesh/model has.</li>
+                <li> Volume control button gives users options to have sounds on or off. </li>
+                <li> Some common patterns from example websites: rotations, particles,
+                    models/meshes/particles change position along with mouse movement, etc. ...cool or cliche? it should
+                    make
+                    sense;)</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section class="lightShadow-container" id="lightShadow">
+            <h2>Light and Shadow</h2>
+            <h3 id="lightShadow-examples">Examples</h3>
+            <div class="loadAndClear">
+                <a id="lightShadowThree__load" class="loadButton"
+                    href="https://threejs.org/examples/#webgl_animation_skinning_blending"
+                    target="lightShadowThree__iframe">Load
+                    Content</a>
+                <a id="lightShadowThree__clear" class="clearButton" href="iframeBg.html"
+                    target="lightShadowThree__iframe">Close
+                    Content</a>
             </div>
-        </ul>
-    </section>
+            <iframe src="iframeBg.html" class="loading-iframe" name="lightShadowThree__iframe" loading="lazy">
+            </iframe>
 
-    <section>
-        <h2 id="otherEffects">Some other effects that I haven't tried</h2>
-        <h3>Examples</h3>
-        <p> <a href="https://aframe.io/examples/showcase/sky/"> 360° image with A-frame </a></p>
+            <h3 id="lightShadow-documentations">Documentations</h3>
 
-        <div class="loadAndClear">
-            <a id="effect1__load" class="loadButton" href="https://aframe.io/examples/showcase/sky/"
-                target="effect1__iframe">Load
-                Content</a>
-            <a id="effect1__clear" class="clearButton" href="iframeBg.html" target="effect1__iframe">Close
-                Content</a>
-        </div>
-        <iframe src="iframeBg.html" loading="lazy" id="effect1__iframe" name="effect1__iframe"
-            class="loading-iframe"></iframe>
+            <p> <a href="https://threejs.org/docs/?q=light#api/en/lights/AmbientLight">Lights</a> and <a
+                    href="https://threejs.org/docs/index.html?q=shadow#api/en/lights/shadows/LightShadow">shadows</a> in
+                Three.js</p>
 
-        <p> <a href="https://threejs.org/examples/webgl_postprocessing_crossfade.html"> Scenes transition with
-                Three.js
-            </a></p>
+            <div class="loadAndClear">
+                <a id="lightShadowThreeDoc1__load" class="loadButton"
+                    href="https://threejs.org/docs/?q=light#api/en/lights/AmbientLight"
+                    target="lightShadowThreeDoc1__iframe">Load Content</a>
+                <a id="lightShadowThreeDoc1__clear" class="clearButton" href="iframeBg.html"
+                    target="lightShadowThreeDoc1__iframe">Close Content</a>
+            </div>
+            <iframe src="iframeBg.html" class="loading-iframe" name="lightShadowThreeDoc1__iframe"
+                loading="lazy"></iframe>
 
-        <div class="loadAndClear">
-            <a id="effect2__load" class="loadButton"
-                href="https://threejs.org/examples/webgl_postprocessing_crossfade.html" target="effect2__iframe">Load
-                Content</a>
-            <a id="effect2__clear" class="clearButton" href="iframeBg.html" target="effect2__iframe">Close
-                Content</a>
-        </div>
-        <iframe src="iframeBg.html" loading="lazy" id="effect2__iframe" name="effect2__iframe"
-            class="loading-iframe"></iframe>
+            <div class="loadAndClear">
+                <a id="lightShadowThreeDoc2__load" class="loadButton"
+                    href="https://threejs.org/docs/index.html?q=shadow#api/en/lights/shadows/LightShadow"
+                    target="lightShadowThreeDoc2__iframe">Load Content</a>
+                <a id="lightShadowThreeDoc2__clear" class="clearButton" href="iframeBg.html"
+                    target="lightShadowThreeDoc2__iframe">Close Content</a>
+            </div>
+            <iframe src="iframeBg.html" class="loading-iframe" name="lightShadowThreeDoc2__iframe"
+                loading="lazy"></iframe>
 
-        <p> <a href="https://www.midwam.com/en"> Shader - looks pretty difficult - Shaders are written in the C-like
-                language GLSL </a></p>
+            <p> <a href="https://aframe.io/docs/1.2.0/components/light.html#sidebar">Lights</a> and <a
+                    href="https://aframe.io/docs/1.2.0/components/shadow.html#sidebar">shadows</a> in A-frame</p>
 
-        <div class="loadAndClear">
-            <a id="effect3__load" class="loadButton" href="https://www.midwam.com/en" target="effect3__iframe">Load
-                Content</a>
-            <a id="effect3__clear" class="clearButton" href="iframeBg.html" target="effect3__iframe">Close
-                Content</a>
-        </div>
-        <iframe src="iframeBg.html" loading="lazy" id="effect3__iframe" name="effect3__iframe"
-            class="loading-iframe"></iframe>
+            <div class="loadAndClear">
+                <a id="lightShadowAframeDoc1__load" class="loadButton"
+                    href="https://aframe.io/docs/1.2.0/components/light.html#sidebar"
+                    target="lightShadowAframeDoc1__iframe">Load Content</a>
+                <a id="lightShadowAframeDoc1__clear" class="clearButton" href="iframeBg.html"
+                    target="lightShadowAframeDoc1__iframe">Close Content</a>
+            </div>
+            <iframe src="iframeBg.html" class="loading-iframe" name="lightShadowAframeDoc1__iframe"
+                loading="lazy"></iframe>
 
-        <p> <a href="http://letsplay.ouigo.com/"> Physics (such as gravity and collisions)</a></p>
-        <div class="loadAndClear">
-            <a id="effect4__load" class="loadButton" href="https://tympanus.net/Tutorials/PhysicsMenu/"
-                target="effect4__iframe">Load
-                Content</a>
-            <a id="effect4__clear" class="clearButton" href="iframeBg.html" target="effect4__iframe">Close
-                Content</a>
-        </div>
-        <iframe src="iframeBg.html" loading="lazy" id="effect4__iframe" name="effect4__iframe"
-            class="loading-iframe"></iframe>
-        <p>Another example: <a href="http://letsplay.ouigo.com/">Let's Play</a> (please open the link
-            in a new tab)</p>
-        <p>Some of the 3D physics engines for Javascript: </p>
-        <p><a href="https://github.com/kripken/ammo.js/">Ammo.js</a></p>
-        <p><a href="https://lo-th.github.io/Oimo.js/#basic">Oimo.js</a></p>
-        <p><a href="https://schteppe.github.io/cannon.js/">Cannon.js</a></p>
-    </section>
+            <div class="loadAndClear">
+                <a id="lightShadowAframeDoc2__load" class="loadButton"
+                    href="https://aframe.io/docs/1.2.0/components/shadow.html#sidebar"
+                    target="lightShadowAframeDoc2__iframe">Load Content</a>
+                <a id="lightShadowAframeDoc2__clear" class="clearButton" href="iframeBg.html"
+                    target="lightShadowAframeDoc2__iframe">Close Content</a>
+            </div>
+            <iframe src="iframeBg.html" class="loading-iframe" name="lightShadowAframeDoc2__iframe"
+                loading="lazy"></iframe>
 
-    <hr>
+            <p> <a href="https://doc.babylonjs.com/divingDeeper/lights/lights_introduction">Lights</a> and <a
+                    href="https://doc.babylonjs.com/divingDeeper/lights/shadows">shadows</a> in
+                Babylon.js</p>
 
-    <section id="resources">
-        <h2>Resources</h2>
+            <div class="loadAndClear">
+                <a id="lightShadowBabylonDoc1__load" class="loadButton"
+                    href="https://doc.babylonjs.com/divingDeeper/lights/lights_introduction"
+                    target="lightShadowBabylonDoc1__iframe">Load Content</a>
+                <a id="lightShadowBabylonDoc1__clear" class="clearButton" href="iframeBg.html"
+                    target="lightShadowBabylonDoc1__iframe">Close Content</a>
+            </div>
+            <iframe src="iframeBg.html" class="loading-iframe" name="lightShadowBabylonDoc1__iframe"
+                loading="lazy"></iframe>
 
-        <h3>More Examples with interactive 3D backgrounds/elements</h3>
-        <p><a href="https://chartogne-taillet.com/en">Chartogne Taillet</a></p>
-        <p><a href="https://umamiland.withgoogle.com/en">Umamiland</a></p>
-        <p><a href="https://lifeinvogue.vogue.it/">Life in Vogue </a></p>
-        <p><a href="https://annoyingmuseum.zendesk.com/">Annoying Museum</a></p>
-        <p><a href="https://go.pioneer.com/cornrevolution">Corn Revolution</a></p>
-        <p><a href="https://richardmattka.com/">Richard Mattka</a></p>
-        <p><a href="https://uxblon.de/index.html">Uxblon</a></p>
+            <div class="loadAndClear">
+                <a id="lightShadowBabylonDoc2__load" class="loadButton"
+                    href="https://doc.babylonjs.com/divingDeeper/lights/shadows"
+                    target="lightShadowBabylonDoc2__iframe">Load Content</a>
+                <a id="lightShadowBabylonDoc2__clear" class="clearButton" href="iframeBg.html"
+                    target="lightShadowBabylonDoc2__iframe">Close Content</a>
+            </div>
+            <iframe src="iframeBg.html" class="loading-iframe" name="lightShadowBabylonDoc2__iframe"
+                loading="lazy"></iframe>
 
-        <h3>Online tutorials and Codepen examples</h3>
-        <p><a href="https://threejs.org/docs/">Three.js Documentation</a></p>
-        <p><a href="https://threejsfundamentals.org/">Three.js Fundamentals</a></p>
-        <p> <a href="https://tympanus.net/codrops/2017/11/28/decorative-webgl-backgrounds/">Interactive 3D
-                background with Three.js </a></p>
-        <p> <a href="https://www.jotform.com/blog/20-exceptional-three-js-experiments-98740/">Three.js Experiments</a>
-        </p>
-        <p><a href="https://aframe.io/docs/1.2.0/introduction/">A-frame Documentation</a></p>
-        <p><a href="https://aframe.io/aframe-school/#/">A-frame School</a></p>
-        <p><a href="https://doc.babylonjs.com/">Babylon.js Documentation</a></p>
+            <h3 id="lightShadow-experiments">Experiment: Light & Shadow</h3>
 
+            <div class="loadAndClear">
+                <a id="shadow__load" class="loadButton" href="https://junjie-w.github.io/experiments/shadow.html"
+                    target="shadow__iframe">Load Content</a>
+                <a id="shadow__clear" class="clearButton" href="iframeBg.html" target="shadow__iframe">Close
+                    Content</a>
+            </div>
+            <iframe src="iframeBg.html" loading="lazy" id="island__iframe" name="shadow__iframe"
+                class="loading-iframe"></iframe>
+
+            <p>We can add lights to objects, and control which surfaces should receive shadows and which objects should
+                cast
+                shadows.</p>
+
+            <h4>What I did here:</h4>
+            <ul>
+                <li>Loaded three models from Sketchfab;</li>
+                <div class="models__shadow">
+                    <div class="loadAndClear">
+                        <button id="shadowModel1__load" class="loadButton--jsfiddle">Load Content</button>
+                        <button id="shadowModel1__clear" class="clearButton--jsfiddle">Close Content</button>
+                    </div>
+                    <div class="jsfiddle-iframes">
+                        <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
+                        <div class="loading-script--jsfiddle">
+                            <div class="sketchfab-embed-wrapper"> <iframe title="Traffic Light" frameborder="0"
+                                    allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+                                    allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport
+                                    execution-while-not-rendered web-share
+                                    src="https://sketchfab.com/models/e512a5adb1904a71a1bd53c4a21b48d4/embed"> </iframe>
+                                <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
+                                        href="https://sketchfab.com/3d-models/traffic-light-e512a5adb1904a71a1bd53c4a21b48d4?utm_medium=embed&utm_campaign=share-popup&utm_content=e512a5adb1904a71a1bd53c4a21b48d4"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;"> Traffic Light </a>
+                                    by <a
+                                        href="https://sketchfab.com/gadsby?utm_medium=embed&utm_campaign=share-popup&utm_content=e512a5adb1904a71a1bd53c4a21b48d4"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;"> gadsby </a> on <a
+                                        href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=e512a5adb1904a71a1bd53c4a21b48d4"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="loadAndClear">
+                        <button id="shadowModel2__load" class="loadButton--jsfiddle">Load Content</button>
+                        <button id="shadowModel2__clear" class="clearButton--jsfiddle">Close Content</button>
+                    </div>
+                    <div class="jsfiddle-iframes">
+                        <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
+                        <div class="loading-script--jsfiddle">
+                            <div class="sketchfab-embed-wrapper"> <iframe title="Suburban Street Lamp" frameborder="0"
+                                    allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+                                    allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport
+                                    execution-while-not-rendered web-share
+                                    src="https://sketchfab.com/models/fdc8b5ba548243448f9b918ea7892786/embed"> </iframe>
+                                <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
+                                        href="https://sketchfab.com/3d-models/suburban-street-lamp-fdc8b5ba548243448f9b918ea7892786?utm_medium=embed&utm_campaign=share-popup&utm_content=fdc8b5ba548243448f9b918ea7892786"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;"> Suburban Street Lamp
+                                    </a> by
+                                    <a href="https://sketchfab.com/gadsby?utm_medium=embed&utm_campaign=share-popup&utm_content=fdc8b5ba548243448f9b918ea7892786"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;"> gadsby </a> on <a
+                                        href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=fdc8b5ba548243448f9b918ea7892786"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="loadAndClear">
+                        <button id="shadowModel3__load" class="loadButton--jsfiddle">Load Content</button>
+                        <button id="shadowModel3__clear" class="clearButton--jsfiddle">Close Content</button>
+                    </div>
+                    <div class="jsfiddle-iframes">
+                        <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
+                        <div class="loading-script--jsfiddle">
+                            <div class="sketchfab-embed-wrapper"> <iframe title="Snowman" frameborder="0"
+                                    allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+                                    allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport
+                                    execution-while-not-rendered web-share
+                                    src="https://sketchfab.com/models/95b6485c508c4b068d683dda16a33252/embed">
+                                </iframe>
+                                <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
+                                        href="https://sketchfab.com/3d-models/snowman-95b6485c508c4b068d683dda16a33252?utm_medium=embed&utm_campaign=share-popup&utm_content=95b6485c508c4b068d683dda16a33252"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;"> Snowman </a> by <a
+                                        href="https://sketchfab.com/PatelDev?utm_medium=embed&utm_campaign=share-popup&utm_content=95b6485c508c4b068d683dda16a33252"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;"> PatelDev </a> on <a
+                                        href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=95b6485c508c4b068d683dda16a33252"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <li>Added particles to the scene using <a
+                        href="https://www.npmjs.com/package/aframe-particle-system-component">aframe-particle-system-component;</a>
+                </li>
+                <li>Added one pointLight and one spotLight for each light source of the street lamp and traffic lights;
+                </li>
+                <li>Added animations to the lights;</li>
+                <li>Added animations to the snowman;</li>
+                <li>Added a bit of physics effects using <a
+                        href="https://github.com/n5ro/aframe-physics-system">aframe-physics-system</a>.</li>
+
+                <div class="island__files">
+                    <div class="island__file1">
+                        <div class="loadAndClear">
+                            <button class="loadButton--jsfiddle">Load Content</button>
+                            <button class="clearButton--jsfiddle">Close Content</button>
+                        </div>
+                        <div class="jsfiddle-iframes">
+                            <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
+                            <div class="gist-container loading-script--jsfiddle">
+                                <script
+                                    src="https://gist-it.appspot.com/https://github.com/junjie-w/experiments/blob/main/shadow.html">
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="island__file2">
+                        <div class="loadAndClear">
+                            <button class="loadButton--jsfiddle">Load Content</button>
+                            <button class="clearButton--jsfiddle">Close Content</button>
+                        </div>
+                        <div class="jsfiddle-iframes">
+                            <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
+                            <div class="gist-container loading-script--jsfiddle">
+                                <script
+                                    src="https://gist-it.appspot.com/https://github.com/junjie-w/experiments/blob/main/shadow/shadow.js">
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section class="particles-container" id="particles">
+            <h2>Particles</h2>
+            <h3 id="particles-examples">Examples</h3>
+
+            <div class="loadAndClear">
+                <a id="particlesExample1__load" class="loadButton"
+                    href="https://threejs.org/examples/webgl_points_sprites.html"
+                    target="particlesExample1__iframe">Load
+                    Content</a>
+                <a id="particlesExample1__clear" class="clearButton" href="iframeBg.html"
+                    target="particlesExample1__iframe">Close Content</a>
+            </div>
+            <iframe src="iframeBg.html" class="loading-iframe" name="particlesExample1__iframe" loading="lazy"></iframe>
+            <div class="loadAndClear">
+                <a id="particlesExample2__load" class="loadButton"
+                    href="https://tympanus.net/Tutorials/InteractiveParticles/" target="particlesExample2__iframe">Load
+                    Content</a>
+                <a id="particlesExample2__clear" class="clearButton" href="iframeBg.html"
+                    target="particlesExample2__iframe">Close Content</a>
+            </div>
+            <iframe src="iframeBg.html" class="loading-iframe" name="particlesExample2__iframe" loading="lazy"></iframe>
+            <p>More examples: <a href="https://pendereckisgarden.pl/en/the-maestros-manor">Penderecki's Garden</a> and
+                <a href="https://le-voyage-azarien.art/">Le Voyage Azarien</a> (please open the link in a new tab)</p>
+
+            <h3 id="particles-documentations">Online Tutorials and Documentations</h3>
+            <p> <a href="https://aerotwist.com/tutorials/creating-particles-with-three-js/">Creating particles with
+                    Three.js </a></p>
+
+            <div class="loadAndClear">
+                <a id="particlesTutorial__load" class="loadButton"
+                    href="https://aerotwist.com/tutorials/creating-particles-with-three-js/"
+                    target="particlesTutorial__iframe">Load
+                    Content</a>
+                <a id="particlesTutorial__clear" class="clearButton" href="iframeBg.html"
+                    target="particlesTutorial__iframe">Close Content</a>
+            </div>
+            <iframe src="iframeBg.html" class="loading-iframe" name="particlesTutorial__iframe" loading="lazy"></iframe>
+
+            <p> <a href="https://doc.babylonjs.com/divingDeeper/particles/particle_system/particle_system_intro">Particle
+                    systems</a> in Babylon.js</p>
+            <div class="loadAndClear">
+                <a id="particlesDoc__load" class="loadButton"
+                    href="https://doc.babylonjs.com/divingDeeper/particles/particle_system/particle_system_intro"
+                    target="particlesDoc__iframe">Load
+                    Content</a>
+                <a id="particlesDoc__clear" class="clearButton" href="iframeBg.html" target="particlesDoc__iframe">Close
+                    Content</a>
+            </div>
+            <iframe src="iframeBg.html" class="loading-iframe" name="particlesDoc__iframe" loading="lazy"></iframe>
+
+            <h4>Frameworks for particles</h4>
+            <p><a href="https://www.particles3d.com/">Particles 3d</a> </p>
+            <div class="loadAndClear">
+                <a id="particlesLib__load" class="loadButton" href="https://www.particles3d.com/"
+                    target="particlesLib__iframe">Load
+                    Content</a>
+                <a id="particlesLib__clear" class="clearButton" href="iframeBg.html" target="particlesLib__iframe">Close
+                    Content</a>
+            </div>
+            <iframe src="iframeBg.html" class="loading-iframe" name="particlesLib__iframe" loading="lazy"></iframe>
+
+            <p>Other frameworks include <a
+                    href="https://www.npmjs.com/package/aframe-particle-system-component">Aframe-particle-system-component</a>
+                for A-frame and <a href="https://www.vantajs.com/">Vanta.js</a> (please open the link in a new tab).</p>
+
+            <h3 id="particles-experiments">Experiment: Particles</h3>
+            <p class="source"><i>YouTube Tutorial Link: <a
+                        href="https://www.youtube.com/watch?v=dLYMzNmILQA&t=1435s">Working
+                        with Three.js Particle Systems</a> (I have changed some code in my version)</i></p>
+            <div class="loadAndClear">
+                <a id="particles__load" class="loadButton" href="https://junjie-w.github.io/experiments/particles.html"
+                    target="particles__iframe">Load Content</a>
+                <a id="particles__clear" class="clearButton" href="iframeBg.html" target="particles__iframe">Close
+                    Content</a>
+            </div>
+            <iframe src="iframeBg.html" loading="lazy" name="particles__iframe" class="loading-iframe"></iframe>
+            <h4>What I did here:</h4>
+            <ul>
+                <li>Created a mesh with <a
+                        href="https://threejs.org/docs/#api/en/geometries/TorusGeometry">TorusGeometry</a> and set its
+                    material using PointMaterial;</li>
+                <li>For particles: created 5000 particles with random x, y, and z positions using float32array and
+                    Math.random();</li>
+                <li>Created a simple cross svg in Figma and set it to the image of each particle;</li>
+                <li>Add animations using <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a>
+                    to the mesh and particles.</li>
+                <li>Get the x and y position of the mouse and add animation with mouse movements to the mesh and
+                    particles.
+                </li>
+                <div class="island__files">
+                    <div class="island__file1">
+                        <div class="loadAndClear">
+                            <button class="loadButton--jsfiddle">Load Content</button>
+                            <button class="clearButton--jsfiddle">Close Content</button>
+                        </div>
+                        <div class="jsfiddle-iframes">
+                            <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
+                            <div class="gist-container loading-script--jsfiddle">
+                                <script
+                                    src="https://gist-it.appspot.com/https://github.com/junjie-w/experiments/blob/main/particles.html">
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="island__file2">
+                        <div class="loadAndClear">
+                            <button class="loadButton--jsfiddle">Load Content</button>
+                            <button class="clearButton--jsfiddle">Close Content</button>
+                        </div>
+                        <div class="jsfiddle-iframes">
+                            <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
+                            <div class="gist-container loading-script--jsfiddle">
+                                <script
+                                    src="https://gist-it.appspot.com/https://github.com/junjie-w/experiments/blob/main/particles/particles.js">
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section class="clothSimulation-container" id="clothSimulation">
+            <h2>Cloth simulation</h2>
+            <h3 id="clothSimulation-examples">Examples</h3>
+            <div class="loadAndClear">
+                <a id="clothExample1__load" class="loadButton"
+                    href="https://threejs.org/examples/#webgl_animation_cloth" target="clothExample1__iframe">Load
+                    Content</a>
+                <a id="clothExample1__clear" class="clearButton" href="iframeBg.html"
+                    target="clothExample1__iframe">Close
+                    Content</a>
+            </div>
+            <iframe src="iframeBg.html" class="loading-iframe" name="clothExample1__iframe" loading="lazy"></iframe>
+            <div class="loadAndClear">
+                <a id="clothExample2__load" class="loadButton" href="https://lusion.co/"
+                    target="clothExample2__iframe">Load
+                    Content</a>
+                <a id="clothExample2__clear" class="clearButton" href="iframeBg.html"
+                    target="clothExample2__iframe">Close
+                    Content</a>
+            </div>
+            <iframe src="iframeBg.html" class="loading-iframe" name="clothExample2__iframe" loading="lazy"></iframe>
+            <div class="loadAndClear">
+                <a id="clothExample3__load" class="loadButton" href="https://prior.co.jp/discover/en"
+                    target="clothExample3__iframe">Load
+                    Content</a>
+                <a id="clothExample3__clear" class="clearButton" href="iframeBg.html"
+                    target="clothExample3__iframe">Close
+                    Content</a>
+            </div>
+            <iframe src="iframeBg.html" class="loading-iframe" name="clothExample3__iframe" loading="lazy"></iframe>
+
+            <h3 id="clothSimulation-tutorials">Online Tutorials</h3>
+            <div class="loadAndClear">
+                <a id="clothTutorial__load" class="loadButton"
+                    href="https://blog.raananweber.com/2016/04/03/cloth-physics-simulation-for-babylon-js/"
+                    target="clothTutorial__iframe">Load Content</a>
+                <a id="clothTutorial__clear" class="clearButton" href="iframeBg.html"
+                    target="clothTutorial__iframe">Close
+                    Content</a>
+            </div>
+            <iframe src="iframeBg.html" class="loading-iframe" name="clothTutorial__iframe" loading="lazy"></iframe>
+
+            <h3 id="clothSimulation-experiments">Experiment: Cloth Simulation</h3>
+            <div class="loadAndClear">
+                <a id="cloth__load" class="loadButton" href="https://junjie-w.github.io/experiments/island.html"
+                    target="cloth__iframe">Load
+                    Content</a>
+                <a id="cloth__clear" class="clearButton" href="iframeBg.html" target="cloth__iframe">Close
+                    Content</a>
+            </div>
+            <iframe src="iframeBg.html" loading="lazy" id="cloth__iframe" name="cloth__iframe"
+                class="loading-iframe"></iframe>
+            <p>I tried to use a bit of cloth simulation here. If you click on the lights and wait for a while, a soft
+                clock
+                will
+                appear like a piece of cloth floating in the air. However, it’s far from what I expected. I am trying to
+                make it a
+                real-time clock tho... And trying to add more interactions.
+            </p>
+            <h4>What I did here:</h4>
+            <ul>
+                <li>Created a mesh with <a
+                        href="https://threejs.org/docs/#api/en/geometries/CircleGeometry">CircleGeometry</a> and set its
+                    material as an image of a clock;</li>
+                <li>When the clock doesn't hit position.y as 1, its position will keep going down;</li>
+                <li>Its vertices will change position x, y, and z like waves along with the time changing, this is
+                    achieved
+                    by using <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map()</a>
+                    and <a href="https://en.wikipedia.org/wiki/Sine_wave"><span class="mathSin">Math.sin() <img
+                                class="sinCos" src="images/sin&cos.png" alt="">
+                        </span></a>.
+                </li>
+
+
+                <div class="island__files">
+                    <div class="island__file1">
+                        <div class="loadAndClear">
+                            <button class="loadButton--jsfiddle">Load Content</button>
+                            <button class="clearButton--jsfiddle">Close Content</button>
+                        </div>
+                        <div class="jsfiddle-iframes">
+                            <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
+                            <div class="gist-container loading-script--jsfiddle">
+                                <script
+                                    src="https://gist-it.appspot.com/https://github.com/junjie-w/experiments/blob/main/island.html">
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="island__file2">
+                        <div class="loadAndClear">
+                            <button class="loadButton--jsfiddle">Load Content</button>
+                            <button class="clearButton--jsfiddle">Close Content</button>
+                        </div>
+                        <div class="jsfiddle-iframes">
+                            <iframe src="iframeBg.html" class="loading-iframe--jsfiddle" loading="lazy"></iframe>
+                            <div class="gist-container loading-script--jsfiddle">
+                                <script
+                                    src="https://gist-it.appspot.com/https://github.com/junjie-w/experiments/blob/main/island/island.js">
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </section>
+
+        <section>
+            <h2 id="otherEffects">Some other effects that I haven't tried</h2>
+            <h3>Examples</h3>
+            <p> <a href="https://aframe.io/examples/showcase/sky/"> 360° image with A-frame </a></p>
+
+            <div class="loadAndClear">
+                <a id="effect1__load" class="loadButton" href="https://aframe.io/examples/showcase/sky/"
+                    target="effect1__iframe">Load
+                    Content</a>
+                <a id="effect1__clear" class="clearButton" href="iframeBg.html" target="effect1__iframe">Close
+                    Content</a>
+            </div>
+            <iframe src="iframeBg.html" loading="lazy" id="effect1__iframe" name="effect1__iframe"
+                class="loading-iframe"></iframe>
+
+            <p> <a href="https://threejs.org/examples/webgl_postprocessing_crossfade.html"> Scenes transition with
+                    Three.js
+                </a></p>
+
+            <div class="loadAndClear">
+                <a id="effect2__load" class="loadButton"
+                    href="https://threejs.org/examples/webgl_postprocessing_crossfade.html"
+                    target="effect2__iframe">Load
+                    Content</a>
+                <a id="effect2__clear" class="clearButton" href="iframeBg.html" target="effect2__iframe">Close
+                    Content</a>
+            </div>
+            <iframe src="iframeBg.html" loading="lazy" id="effect2__iframe" name="effect2__iframe"
+                class="loading-iframe"></iframe>
+
+            <p> <a href="https://www.midwam.com/en"> Shader - looks pretty difficult - Shaders are written in the C-like
+                    language GLSL </a></p>
+
+            <div class="loadAndClear">
+                <a id="effect3__load" class="loadButton" href="https://www.midwam.com/en" target="effect3__iframe">Load
+                    Content</a>
+                <a id="effect3__clear" class="clearButton" href="iframeBg.html" target="effect3__iframe">Close
+                    Content</a>
+            </div>
+            <iframe src="iframeBg.html" loading="lazy" id="effect3__iframe" name="effect3__iframe"
+                class="loading-iframe"></iframe>
+
+            <p> <a href="http://letsplay.ouigo.com/"> Physics (such as gravity and collisions)</a></p>
+            <div class="loadAndClear">
+                <a id="effect4__load" class="loadButton" href="https://tympanus.net/Tutorials/PhysicsMenu/"
+                    target="effect4__iframe">Load
+                    Content</a>
+                <a id="effect4__clear" class="clearButton" href="iframeBg.html" target="effect4__iframe">Close
+                    Content</a>
+            </div>
+            <iframe src="iframeBg.html" loading="lazy" id="effect4__iframe" name="effect4__iframe"
+                class="loading-iframe"></iframe>
+            <p>Another example: <a href="http://letsplay.ouigo.com/">Let's Play</a> (please open the link
+                in a new tab)</p>
+            <p>Some of the 3D physics engines for Javascript: </p>
+            <p><a href="https://github.com/kripken/ammo.js/">Ammo.js</a></p>
+            <p><a href="https://lo-th.github.io/Oimo.js/#basic">Oimo.js</a></p>
+            <p><a href="https://schteppe.github.io/cannon.js/">Cannon.js</a></p>
+        </section>
+
+        <hr>
+
+        <section id="resources">
+            <h2>Resources</h2>
+
+            <h3>More Examples with interactive 3D backgrounds/elements</h3>
+            <p><a href="https://chartogne-taillet.com/en">Chartogne Taillet</a></p>
+            <p><a href="https://umamiland.withgoogle.com/en">Umamiland</a></p>
+            <p><a href="https://lifeinvogue.vogue.it/">Life in Vogue </a></p>
+            <p><a href="https://annoyingmuseum.zendesk.com/">Annoying Museum</a></p>
+            <p><a href="https://go.pioneer.com/cornrevolution">Corn Revolution</a></p>
+            <p><a href="https://richardmattka.com/">Richard Mattka</a></p>
+            <p><a href="https://uxblon.de/index.html">Uxblon</a></p>
+
+            <h3>Online tutorials and Codepen examples</h3>
+            <p><a href="https://threejs.org/docs/">Three.js Documentation</a></p>
+            <p><a href="https://threejsfundamentals.org/">Three.js Fundamentals</a></p>
+            <p> <a href="https://tympanus.net/codrops/2017/11/28/decorative-webgl-backgrounds/">Interactive 3D
+                    background with Three.js </a></p>
+            <p> <a href="https://www.jotform.com/blog/20-exceptional-three-js-experiments-98740/">Three.js
+                    Experiments</a>
+            </p>
+            <p><a href="https://aframe.io/docs/1.2.0/introduction/">A-frame Documentation</a></p>
+            <p><a href="https://aframe.io/aframe-school/#/">A-frame School</a></p>
+            <p><a href="https://doc.babylonjs.com/">Babylon.js Documentation</a></p>
+
+        </section>
     </section>
 
     <script src="app.js"></script>

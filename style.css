@@ -1,11 +1,96 @@
-/* body {
-    padding-right: 10vw;
-} */
-
 body {
-    padding: 8vw 10vw 10vw 15vw;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.content {
     display: flex;
     flex-direction: column;
+    padding: 8vw 8vw 8vw 15vw;
+}
+
+.nav {
+    position: fixed;
+    width: 12vw;
+    height: 75vh;
+    transition: 0.5s;
+    border-right: 1px solid lightgrey;
+    z-index: 3;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+/* Optional: show position indicator in red */
+/* ::-webkit-scrollbar-thumb {
+    background: lightslategray;
+} */
+
+.nav:hover {
+    width: 225px;
+    background-color: #fff;
+}
+
+.nav__ul {
+    /* width: 8vw; */
+    margin: 10px 0;
+    /* visibility: hidden; */
+}
+
+.nav ul li {
+    /* width: 100%; */
+    list-style: none;
+    margin: 0.7vw 0.7vw 0.7vw 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.subList {
+    margin-left: -20px;
+}
+
+.demoLink:hover {
+    font-weight: bold;
+}
+
+.demoLink {
+    color: #000;
+}
+
+.demo a {
+    text-decoration: none;
+}
+
+.displayNav {
+    visibility: visible;
+}
+
+.hamburger {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0vw;
+    margin-top: -50px;
+    width: 20px;
+    height: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    cursor: pointer;
+    display: none;
+}
+
+.bar {
+    width: 20px;
+    margin: 5px 0;
+    height: 1px;
+    background-color: #333;
 }
 
 hr {
@@ -16,16 +101,33 @@ hr {
 
 section {
     margin-bottom: 1vw;
+    display: flex;
+    flex-direction: column;
 }
 
 iframe {
+    /* border: 1px solid lightslategray; */
     border: none;
+    /* width: 50%; */
+}
+
+ul li {
+    list-style-type: circle;
+    width: 100%;
+    margin: 0.7vw 0.7vw 0.7vw 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.jsfiddle-iframes {
+    position: relative;
+    /* display: flex;
+    justify-content: center; */
 }
 
 iframe,
 .gist-container {
     width: 100%;
-    height: 2vw;
+    height: 40px;
     align-self: center;
     margin: 1vw 0 2vw 0;
     transition: all 1s;
@@ -85,56 +187,6 @@ p {
 
 .iframe-big {
     height: 80vh;
-}
-
-.nav {
-    position: fixed;
-    width: max(1vw, 2vh);
-    width: 10vw;
-    height: 100vh;
-    transition: 0.5s;
-    overflow: hidden;
-    border-right: 1px solid lightgrey;
-    height: 75vh;
-    align-self: center;
-    z-index: 3;
-    left: 1vw;
-}
-
-.nav__ul {
-    width: 8vw;
-    margin: 0.5vw 0.5vw 0.5vw 0;
-    /* visibility: hidden; */
-}
-
-.nav ul li {
-    width: 100%;
-    list-style: none;
-    margin: 0.7vw 0.7vw 0.7vw 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-ul li {
-    list-style-type: circle;
-    width: 100%;
-    margin: 0.7vw 0.7vw 0.7vw 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.demo:hover {
-    font-weight: bold;
-}
-
-.demoLink {
-    color: #000;
-}
-
-.demo a {
-    text-decoration: none;
-}
-
-.displayNav {
-    visibility: visible;
 }
 
 .loadButton,
@@ -199,10 +251,6 @@ ul li {
     transform: scale(0.98);
 }
 
-.jsfiddle-iframes {
-    position: relative;
-}
-
 .loading-script--jsfiddle {
     display: none;
     width: 100%;
@@ -218,7 +266,6 @@ ul li {
 .script--jsfiddle iframe {
     /* height: 80vh; */
     transition: all 1s;
-    height: 100%;
 }
 
 .loading-script--jsfiddle,
@@ -235,4 +282,34 @@ ul li {
 .hide {
     display: none;
     height: 2vw;
+}
+
+.mathSin {
+    position: relative;
+}
+
+.sinCos {
+    background-color: whitesmoke;
+    position: absolute;
+    display: none;
+    width: 25vw;
+    z-index: 1;
+    top: -16vw;
+    left: 0vw;
+    transition: all .5s;
+}
+
+@media (max-width:700px) {
+    .nav__ul {
+        display: none;
+        padding-top: 25px;
+    }
+
+    .hamburger {
+        display: inline-block;
+    }
+
+    .nav:hover>.nav__ul {
+        display: inline-block;
+    }
 }

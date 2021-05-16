@@ -72,3 +72,25 @@ scriptCloseButtons__array.map((button, index) => button.addEventListener("click"
 //     document.querySelector(".loading-script--jsfiddle").classList.remove("display")
 //     document.querySelector(".loading-iframe--jsfiddle").classList.remove("hide")
 // })
+
+document.querySelector(".mathSin").addEventListener("mouseenter", () => {
+    document.querySelector(".sinCos").style.display = "inline-block"
+})
+document.querySelector(".mathSin").addEventListener("mouseleave", () => {
+    document.querySelector(".sinCos").style.display = "none"
+})
+
+// // document.querySelector(".hamburger").addEventListener("mouseenter", () => {
+// //     document.querySelector(".nav__ul").style.display = "inline-block"
+// // })
+
+// // if (window.matchMedia("(max-width: 700px)").matches) {
+// //     document.querySelector(".nav").addEventListener("mouseenter", () => {
+// //         console.log("uhu")
+// //         document.querySelector(".nav__ul").style.display = "inline-block"
+// //     })
+
+// //     document.querySelector(".nav").addEventListener("mouseleave", () => {
+// //         document.querySelector(".nav__ul").style.display = "none"
+// //     })
+// // }
