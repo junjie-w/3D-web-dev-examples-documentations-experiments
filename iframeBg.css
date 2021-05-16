@@ -19,8 +19,6 @@ body {
     display: grid;
 }
 
-svg {}
-
 .bg-click-text {
     text-align: center;
     margin: 0;

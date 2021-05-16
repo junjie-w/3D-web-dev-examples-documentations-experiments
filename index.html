@@ -6,9 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -932,8 +929,10 @@
             </ul>
         </section>
 
-        <section>
-            <h2 id="otherEffects">Some other effects that I haven't tried</h2>
+        <hr>
+
+        <section id="otherEffects">
+            <h2>Some other effects that I haven't tried</h2>
             <h3>Examples</h3>
             <p> <a href="https://aframe.io/examples/showcase/sky/"> 360° image with A-frame </a></p>
 
@@ -962,8 +961,9 @@
             <iframe src="iframeBg.html" loading="lazy" id="effect2__iframe" name="effect2__iframe"
                 class="loading-iframe"></iframe>
 
-            <p> <a href="https://www.midwam.com/en"> Shader - looks pretty difficult - Shaders are written in the C-like
-                    language GLSL </a></p>
+            <p> <a href="https://learnopengl.com/Getting-started/Shaders">Shader</a> - looks pretty difficult - Shaders
+                are written in the C-like
+                language <a href="https://www.khronos.org/opengl/wiki/Core_Language_(GLSL)">GLSL</a></p>
 
             <div class="loadAndClear">
                 <a id="effect3__load" class="loadButton" href="https://www.midwam.com/en" target="effect3__iframe">Load
@@ -974,7 +974,7 @@
             <iframe src="iframeBg.html" loading="lazy" id="effect3__iframe" name="effect3__iframe"
                 class="loading-iframe"></iframe>
 
-            <p> <a href="http://letsplay.ouigo.com/"> Physics (such as gravity and collisions)</a></p>
+            <p> Physics simulations (such as gravity and collisions)</p>
             <div class="loadAndClear">
                 <a id="effect4__load" class="loadButton" href="https://tympanus.net/Tutorials/PhysicsMenu/"
                     target="effect4__iframe">Load
@@ -986,10 +986,12 @@
                 class="loading-iframe"></iframe>
             <p>Another example: <a href="http://letsplay.ouigo.com/">Let's Play</a> (please open the link
                 in a new tab)</p>
-            <p>Some of the 3D physics engines for Javascript: </p>
-            <p><a href="https://github.com/kripken/ammo.js/">Ammo.js</a></p>
-            <p><a href="https://lo-th.github.io/Oimo.js/#basic">Oimo.js</a></p>
-            <p><a href="https://schteppe.github.io/cannon.js/">Cannon.js</a></p>
+            <p>We can use <a href="https://github.com/n5ro/aframe-physics-system">aframe-physics-system</a> to create
+                physics simulations in A-frame.</p>
+            <p>Other 3D physics engines for Javascript include <a
+                    href="https://github.com/kripken/ammo.js/">Ammo.js</a>, <a
+                    href="https://lo-th.github.io/Oimo.js/#basic">Oimo.js</a>, and <a
+                    href="https://schteppe.github.io/cannon.js/">Cannon.js</a>.
         </section>
 
         <hr>
