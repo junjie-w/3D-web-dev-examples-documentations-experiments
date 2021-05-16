@@ -79,6 +79,8 @@
                 those
                 difficult parts become easier in the future!</p>
 
+            <p class="date"><i>May 2021</i></p>
+
             <h2>What is WebGL?</h2>
             <p>WebGL, short for Web Graphics Library,is a JavaScript API for rendering interactive 2D and 3D graphics
                 within any compatible web browser. WebGL elements can be mixed with other HTML elements and composited
@@ -777,8 +779,20 @@
                 <li>Created a mesh with <a
                         href="https://threejs.org/docs/#api/en/geometries/TorusGeometry">TorusGeometry</a> and set its
                     material using PointMaterial;</li>
-                <li>For particles: created 5000 particles with random x, y, and z positions using float32array and
+                <li>For particles: created 5000 particles with random x, y, and z positions using <a
+                        href="https://stackoverflow.com/questions/15823021/when-to-use-float32array-instead-of-array-in-javascript#:~:text=Float32Array%20)%20is%20often%20faster%20than,matrices%20be%20passed%20as%20Float32Array%20.">float32array</a>
+                    and
                     Math.random();</li>
+                <li>Use <a href="https://threejs.org/docs/#api/en/core/BufferAttribute">BufferAttribute</a> to set the
+                    position of the particles.</li>
+                <div class="loadAndClear">
+                    <a id="bufferGeo__load" class="loadButton"
+                        href="https://threejs.org/docs/#api/en/core/BufferAttribute" target="bufferGeo__iframe">Load
+                        Content</a>
+                    <a id="bufferGeo__clear" class="clearButton" href="iframeBg.html" target="bufferGeo__iframe">Close
+                        Content</a>
+                </div>
+                <iframe src="iframeBg.html" loading="lazy" name="bufferGeo__iframe" class="loading-iframe"></iframe>
                 <li>Created a simple cross svg in Figma and set it to the image of each particle;</li>
                 <li>Add animations using <a
                         href="https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a>
@@ -854,14 +868,26 @@
 
             <h3 id="clothSimulation-tutorials" class="nav-subtitle">Online Tutorials</h3>
             <div class="loadAndClear">
-                <a id="clothTutorial__load" class="loadButton"
-                    href="https://blog.raananweber.com/2016/04/03/cloth-physics-simulation-for-babylon-js/"
-                    target="clothTutorial__iframe">Load Content</a>
-                <a id="clothTutorial__clear" class="clearButton" href="iframeBg.html"
-                    target="clothTutorial__iframe">Close
+                <a id="clothTutorial1__load" class="loadButton" href="https://www.youtube.com/embed/Su1n2Uuf38E"
+                    target="clothTutorial1__iframe">Load Content</a>
+                <a id="clothTutorial1__clear" class="clearButton" href="iframeBg.html"
+                    target="clothTutorial1__iframe">Close
                     Content</a>
             </div>
-            <iframe src="iframeBg.html" class="loading-iframe" name="clothTutorial__iframe" loading="lazy"></iframe>
+            <iframe src="iframeBg.html" class="loading-iframe" name="clothTutorial1__iframe" loading="lazy"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+
+            <div class="loadAndClear">
+                <a id="clothTutorial2__load" class="loadButton"
+                    href="https://blog.raananweber.com/2016/04/03/cloth-physics-simulation-for-babylon-js/"
+                    target="clothTutorial2__iframe">Load Content</a>
+                <a id="clothTutorial2__clear" class="clearButton" href="iframeBg.html"
+                    target="clothTutorial2__iframe">Close
+                    Content</a>
+            </div>
+            <iframe src="iframeBg.html" class="loading-iframe" name="clothTutorial2__iframe" loading="lazy"></iframe>
 
             <h3 id="clothSimulation-experiments" class="nav-subtitle">Experiment: Cloth Simulation</h3>
             <div class="loadAndClear">
@@ -886,6 +912,8 @@
                         href="https://threejs.org/docs/#api/en/geometries/CircleGeometry">CircleGeometry</a> and set its
                     material as an image of a clock;</li>
                 <li>When the clock doesn't hit position.y as 1, its position will keep going down;</li>
+                <li>Get the deltaTime using <a href="https://threejs.org/docs/#api/en/core/Clock">THREE.Clock()</a>
+                </li>
                 <li>Its vertices will change position x, y, and z like waves along with the time changing, this is
                     achieved
                     by using <a
@@ -1024,6 +1052,10 @@
                 <li><a href="https://doc.babylonjs.com/">Babylon.js Documentation</a></li>
             </ul>
         </section>
+
+        <!-- <div class="footer">
+            <p><i>May 15, 2021</i></p>
+        </div> -->
     </section>
 
     <script src="app.js"></script>
