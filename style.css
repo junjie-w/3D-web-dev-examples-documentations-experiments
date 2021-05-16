@@ -338,6 +338,11 @@ p {
 }
 
 @media (max-width:1000px) {
+    .content {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
     .nav__ul {
         display: none;
         padding-top: 25px;
