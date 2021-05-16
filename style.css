@@ -318,6 +318,25 @@ p {
     transition: all .5s;
 }
 
+.nav-subtitle {
+    padding-top: 15px;
+}
+
+.footer {
+    margin-bottom: -5vw;
+}
+
+.footer p {
+    text-align: right;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.date {
+    text-align: right;
+    font-size: 1rem;
+}
+
 @media (max-width:1000px) {
     .nav__ul {
         display: none;
@@ -340,23 +359,16 @@ p {
     .nav ul li {
         margin: 5px 5px 5px 0;
     }
-}
 
-.nav-subtitle {
-    padding-top: 15px;
-}
+    .island__files {
+        flex-direction: column;
+    }
 
-.footer {
-    margin-bottom: -5vw;
-}
-
-.footer p {
-    text-align: right;
-    margin: 0;
-    font-size: 1rem;
-}
-
-.date {
-    text-align: right;
-    font-size: 1rem;
+    .island__file1,
+    .island__file2 {
+        flex: 1;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
