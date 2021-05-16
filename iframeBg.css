@@ -15,8 +15,7 @@ body {
     height: 100%;
     margin: 0;
     background-color: #555;
-    /* background-color: slategrey; */
-    /* background-color: lightslategrey; */
+    background-color: slategrey;
     /* background-color: lightslategray; */
     display: grid;
     /* top: 50%;
