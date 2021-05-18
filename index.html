@@ -122,13 +122,25 @@
             </p>
 
             <h3>What is A-frame?</h3>
-            <p><a href="https://aframe.io/">A-Frame</a> is a web framework for building virtual reality experiences. It
+            <p><a href="https://aframe.io/">A-Frame</a> is a three.js framework for building virtual reality
+                experiences. It
                 is
-                based on top of HTML, making it simple to get started. The core is a powerful entity-component framework
+                based on top of HTML, making it simple to get started. The core is a powerful <a
+                    href="https://aframe.io/docs/1.2.0/introduction/entity-component-system.html">entity-component-system
+                    (ECS)</a> architecture
                 that provides a declarative, extensible, and composable structure to three.js. → <a
                     href="https://github.com/aframevr/aframe">Github repository</a></p>
             <p class="source"><i>Source: <a href="https://aframe.io/docs/1.2.0/introduction/#what-is-a-frame"> A-frame:
                         What is A-Frame?</a></i></p>
+            <div class="loadAndClear">
+                <a id="aframeSystem__load" class="loadButton"
+                    href="https://aframe.io/docs/1.2.0/introduction/entity-component-system.html"
+                    target="aframeSystem__iframe">Load
+                    Content</a>
+                <a id="aframeSystem__clear" class="clearButton" href="iframeBg.html" target="aframeSystem__iframe">Close
+                    Content</a>
+            </div>
+            <iframe src="iframeBg.html" loading="lazy" name="aframeSystem__iframe" class="loading-iframe"></iframe>
 
             <h3>What is Babylon.js?</h3>
             <p><a href="https://www.babylonjs.com/">Babylon.js</a> is a real time 3D engine using a JavaScript library
