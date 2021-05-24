@@ -376,4 +376,9 @@ p {
         margin-left: 0;
         margin-right: 0;
     }
+
+    * {
+        /* font-family: 'Roboto', sans-serif !important; */
+        font-family: 'Ubuntu', sans-serif !important;
+    }
 }
